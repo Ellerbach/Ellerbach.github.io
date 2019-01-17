@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "Accessing embedded serial ports in .NET Core 2.0 on a Raspberry PI 3 running Linux"
+date: 2017-07-04 05:04:35 +0100
+categories: 
+---
+You will find a full documentation and steps by steps explaining how to access the serial ports in .NET Core for Raspberry PI 3 running Linux. You can [access here](https://github.com/Ellerbach/serialapp). In short, you'll need first to unlock the access of the embedded serial port, then install on a supportted Platform the .NET Core, then choose how you want to access the serial ports, either in a simple and efficient way if you have simple things to do and performances don't matter to much, either in a more complex way if performance matter and if you want more features and be able to tune the serial port usage. Note that the Embedded UART is by default use for the debug console. As always, feedbacks welcome!
