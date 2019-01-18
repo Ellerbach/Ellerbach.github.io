@@ -3,6 +3,8 @@ layout: post
 title:  "A low cost humidity sensor for my sprinkler system"
 date: 2012-06-24 08:23:47 +0100
 categories: 
+author: "Laurent Ellerbach"
+thumbnails: "/assets/2012-06-24-thumb.jpg"
 ---
 I’ve [developed my own sprinkler system]({% post_url 2012-05-06-Managing-my-Sprinklers-from-the-Cloud %}) which embed a web server and allow me to control it remotely where ever I am. I can program when and how long I will sprinkler on which circuit. I have 3 circuits but my system can work with a large number of circuits.
 

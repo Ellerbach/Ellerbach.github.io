@@ -3,6 +3,8 @@ layout: post
 title:  "Creating an Azure IoT Device Explorer in node.js, express and jade"
 date: 2015-11-24 08:25:45 +0100
 categories: 
+author: "Laurent Ellerbach"
+thumbnails: "/assets/2015-11-24-thumb.jpg"
 ---
 After playing a bit with Azure IoT hub and building a [webcam system with a RaspberryPi 2 running Linux]({% post_url 2015-11-13-Azure-IoT-Hub-uploading-a-Webcam-picture-in-an-Azure-blob-with-node.js-on-Windows-and-Linux %}) in my previous article, I’ve decided to continue developing a bit in node.js to build a simple equivalent of the [Device Explorer](https://github.com/Azure/azure-iot-sdks/tree/master/tools/DeviceExplorer) but in node.js. I’m not a node.js expert so there may be more efficient way to write some of the code.
 

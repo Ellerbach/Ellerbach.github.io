@@ -3,6 +3,8 @@ layout: post
 title:  "Connect your Arduino, Spark.IO, Netduino (NETMF .Net Microframework), Galileo to Microsoft Azure (Part 2) to create an Internet of Things (IoT)"
 date: 2014-11-14 10:01:26 +0100
 categories: 
+author: "Laurent Ellerbach"
+thumbnails: "/assets/2014-11-14-thumb.jpg"
 ---
 In the [previous article]({% post_url 2014-11-08-Connect-your-Arduino,-Spark.IO,-Netduino-(.Net-Microframework),-Galileo-to-Microsoft-Azure-(Part-1) %}), I’ve explained that I’ll build an Internet of Things (IoT) infrastructure to pilot automatically with sensors and a Microsoft Azure backend my Sprinkler system at home. I’ve also explained a bit the [full architecture](/assets/2146.image_8.png). In this post, I will explain how I have connected existing objects and make them communicating with the rest of the world as well as how I’ve created my own objects.
 

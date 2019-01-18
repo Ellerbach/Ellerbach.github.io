@@ -2,6 +2,8 @@
 layout: post
 title:  "Lighting my Lego city using .NET Microframework"
 date: 2011-10-11 23:10:00 +0100
+author: "Laurent Ellerbach"
+thumbnails: "/assets/2011-10-11-thumb.jpg"
 ---
 Now I have created a software to [pilot sprinklers]({% post_url 2011-09-12-Implementing-a-simple-HTTP-server-in-.NET-Microframework %}), I want to be able to pilot my Lego city and light it. I know my sprinkler project is not over as I still need to work on the hardware. I will do it over the winter and try to find someone to help me. This new project looks simpler for me as it will basically only be couple of led. So it can be directly plugged to the [netduino]({% post_url 2011-09-09-netduino-board-geek-tool-for-.NET-Microframework %}) board.
 

@@ -3,6 +3,8 @@ layout: post
 title:  "Adding Bluetooth support to a NETMF board (.NET Microframework)"
 date: 2013-04-29 02:59:39 +0100
 categories: 
+author: "Laurent Ellerbach"
+thumbnails: "/assets/2013-04-29-thumb.jpg"
 ---
 I recently bought a very cheap Bluetooth adaptor for my Netduino. I wanted to test how easy/hard it is to support Bluetooth. I see lots of advantages with Bluetooth for a near field communication like piloting easily a robot with a Phone without the need of other network or Infrared. Also Bluetooth is a secured communication with a peering.
 

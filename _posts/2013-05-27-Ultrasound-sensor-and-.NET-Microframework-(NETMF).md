@@ -3,6 +3,8 @@ layout: post
 title:  "Ultrasound sensor and .NET Microframework (NETMF)"
 date: 2013-05-27 10:42:52 +0100
 categories: 
+author: "Laurent Ellerbach"
+thumbnails: "/assets/2013-05-27-thumb.jpg"
 ---
 I recently bought a cheap ultrasound sensor because I want to build a robot. Yes, after the [sprinkler management system]({% post_url 2012-05-06-Managing-my-Sprinklers-from-the-Cloud %}) and the [automation of my Lego city]({% post_url 2012-06-20-Using-XMLHttpRequest-to-pilot-a-Lego-train-dynamically-in-HTML-5 %}), it’s time to play with a robot ![Sourire](/assets/4401.wlEmoticon-smile_2.png). This sensor can measure the distance from 2 cm to approximately 50 cm. Cost is about 5$. 
 

@@ -3,6 +3,8 @@ layout: post
 title:  "How to move Azure VM between subscriptions"
 date: 2015-10-01 07:40:17 +0100
 categories: 
+author: "Laurent Ellerbach"
+thumbnails: "/assets/2015-10-01-thumb.jpg"
 ---
 I recently needed to move an Azure Virtual Machine from one subscription to another one. I read a LOT on how to do that and it looks super complicated. At the end of the day, I found an easy 3 steps way to make it, so sharing on this blog ![Sourire](/assets/4401.wlEmoticon-smile_2.png)
 

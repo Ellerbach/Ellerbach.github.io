@@ -3,6 +3,8 @@ layout: post
 title:  "Using XMLHttpRequest to pilot a Lego train dynamically in HTML 5"
 date: 2012-06-20 13:51:25 +0100
 categories: 
+author: "Laurent Ellerbach"
+thumbnails: "/assets/2012-06-20-thumb.jpg"
 ---
 It’s a long time I did not write a blog post. I was very busy and had no time to write and code anything in the last weeks. I still have a lot of work but I need an intellectual break for the evening. So I do not write this post from a plane but from an hotel room. In my past [blog posts]({% post_url 2012-04-26-Using-netduino-and-.NET-Microframework-to-pilot-any-Lego-Power-Function-thru-Infrared-(part-3) %}) I’ve explained how to pilot any Lego Power System with a [Netduino]({% post_url 2011-09-09-netduino-board-geek-tool-for-.NET-Microframework %}) using .NET Microframework. 
 

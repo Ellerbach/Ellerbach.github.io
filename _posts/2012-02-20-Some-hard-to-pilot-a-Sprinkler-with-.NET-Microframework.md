@@ -2,6 +2,8 @@
 layout: post
 title:  "Some hard to pilot a Sprinkler with .NET Microframework"
 date: 2012-02-20 07:18:00 +0100
+author: "Laurent Ellerbach"
+thumbnails: "/assets/2012-02-20-thumb.jpg"
 ---
 In previous post, I've explained I want to pilot my sprinklers with a [netduino]({% post_url 2011-09-09-netduino-board-geek-tool-for-.NET-Microframework %}) board. I've already write couple of articles around it, including how to create a [HTTP web server]({% post_url 2011-09-12-Implementing-a-simple-HTTP-server-in-.NET-Microframework %}), [set up the date and time]({% post_url 2011-09-13-Setup-a-time-and-date-using-.NET-Microframework %}), manage parameters, [launch timers]({% post_url 2011-10-06-Creating-and-launching-timer-in-.NET-Microframework %}), [pilot basic IO]({% post_url 2012-02-17-Using-basic-IO-with-.NET-Microframework %}). I've also shown couple of examples including this Sprinkler solution during the French TechDays. The video is [available](http://www.microsoft.com/france/mstechdays/programmes/parcours.aspx?SessionID=f9a8f69e-723a-40d1-8dc0-c306f4cddfb5#&fbid=7BiS6WzaS_o). I just love .NET Microframework (NETMF) ![Sourire](/assets/4401.wlEmoticon-smile_2.png) so good to have no OS such as Linux or Windows, just a managed .NET environment!
 

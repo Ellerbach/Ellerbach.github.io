@@ -3,6 +3,8 @@ layout: post
 title:  "Using basic IO with .NET Microframework"
 date: 2012-02-17 07:05:00 +0100
 categories: 
+author: "Laurent Ellerbach"
+thumbnails: "/assets/2012-02-17-thumb.jpg"
 ---
 Here is the code from my first [French TechDays](http://www.mstechdays.fr/) demo. The video is available [here](http://www.microsoft.com/france/mstechdays/programmes/parcours.aspx?SessionID=f9a8f69e-723a-40d1-8dc0-c306f4cddfb5#&amp;fbid=7BiS6WzaS_o). During this first demo, I explained how to use the IO in a simple way: OutputPort, InterruptPort, InputPort and Analogic input ports. So those ports are really the basic one you can use in a .NET Microframework (NETMF) boards like the [netduino]({% post_url 2011-09-09-netduino-board-geek-tool-for-.NET-Microframework %}) one I’m using. All boards do also includes more advances IO like UART (serial), SPI, I2C and more. I’ll probably do other posts to explain how to use more advance ports.
 

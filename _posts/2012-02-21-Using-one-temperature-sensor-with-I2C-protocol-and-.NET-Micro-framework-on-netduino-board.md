@@ -3,6 +3,8 @@ layout: post
 title:  "Using one temperature sensor with I2C protocol and .NET Micro framework on netduino board"
 date: 2012-02-21 11:57:59 +0100
 categories: 
+author: "Laurent Ellerbach"
+thumbnails: "/assets/2012-02-21-thumb.jpg"
 ---
 I wanted to play with a temperature sensor. And when the time came to choose one, I was amaze to see how many of those sensor exists. Some were simple resistor like the light sensor I used in one of my previous example, some were more like transistors, and couple integrated more advanced features. And I choose a TC74 from Microchip as it includes an I2C communication protocol and was extremely cheap (less than 1€ for the cheap). And they were sold by 2 so I get 2 of them ![Sourire](/assets/4401.wlEmoticon-smile_2.png) My main idea was to be able to get the temperature of both of them.
 

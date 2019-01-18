@@ -3,6 +3,8 @@ layout: post
 title:  "Create your own mobile video recorder or animation stand"
 date: 2012-03-03 07:47:07 +0100
 categories: 
+author: "Laurent Ellerbach"
+thumbnails: "/assets/2012-03-03-thumb.jpg"
 ---
 Long time ago, when I was doing lots of demos and used to have to display mobile phone like smartphone of Windows Embedded devices, I needed a mobile video recorder to be able to display them. Of course, I though using a webcam but the webcam alone does not allow you to demo the device. And I figure out that those kind of animation stand costs lots of money and were not easy to transport and very costly to rent. So I decided to build my own. And I recently use it again as I had to demo my Windows Phone 7 device and also .NET Microframework device like [netduino]({% post_url 2011-09-09-netduino-board-geek-tool-for-.NET-Microframework %}).
 

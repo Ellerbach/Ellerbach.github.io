@@ -3,6 +3,8 @@ layout: post
 title:  "Azure IoT Hub uploading a Webcam picture in an Azure blob with node.js on Windows and Linux"
 date: 2015-11-13 08:07:00 +0100
 categories: 
+author: "Laurent Ellerbach"
+thumbnails: "/assets/2015-11-13-thumb.jpg"
 ---
 In my garden, I have couple of sensors and a greenhouse. In order to play with different technologies I’m using a RaspberryPI v1 (RPI) under Linux with an Atmel328 (same as in Arduino) for analogic data. And I wanted to test the new Azure IoT Hub. As I didn’t know anything on node.js, I‘ve decided to go for node.js as well using this RPI under Linux. So many new technologies for me ![Sourire](/assets/4401.wlEmoticon-smile_2.png) As I just wrote, I’m not a node.js king neither a Linux expert, just a beginner but I want to share my experience. And there may be best ways to code all this, so feedbacks welcome.
 

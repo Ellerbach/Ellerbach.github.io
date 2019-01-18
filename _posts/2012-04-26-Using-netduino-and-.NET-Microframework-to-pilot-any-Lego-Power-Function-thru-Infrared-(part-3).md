@@ -3,6 +3,8 @@ layout: post
 title:  "Using netduino and .NET Microframework to pilot any Lego Power Function thru Infrared (part 3)"
 date: 2012-04-26 10:39:36 +0100
 categories: 
+author: "Laurent Ellerbach"
+thumbnails: "/assets/2012-04-26-thumb.jpg"
 ---
 In the [previous post]({% post_url 2012-04-07-Using-netduino-and-.NET-Microframework-to-pilot-any-Lego-Power-Function-thru-Infrared-(part-1) %}), I’ve explain how to create a class and the hardware that will be able to pilot any Lego Power Function. In this article, I will explain how to create a web server (like IIS or Apache but much much much more simpler) and create a simple way to call the class. 
 

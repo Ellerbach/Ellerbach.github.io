@@ -3,6 +3,8 @@ layout: post
 title:  "Using netduino and .NET Microframework to pilot any Lego Power Function thru Infrared (part 1)"
 date: 2012-04-07 08:49:00 +0100
 categories: 
+author: "Laurent Ellerbach"
+thumbnails: "/assets/2012-04-07-thumb.jpg"
 ---
 I’m part of [FREELUG](http://www.freelug.org/), the French Enthusiast Lego User Group. And in this group, there are lots of discussions on Lego of course. In one of the thread someone ask the question if it was possible to pilot an Lego train using the new Power Function with a PC. The need is during expo, it makes it easier to run trains, stop them in a programmatic way.
 

@@ -3,6 +3,8 @@ layout: post
 title:  "Servo motor tester in NETMF (.NET Micro Framework) with Netduino"
 date: 2015-01-09 10:36:54 +0100
 categories: 
+author: "Laurent Ellerbach"
+thumbnails: "/assets/2015-01-09-thumb.jpg"
 ---
 I rencently bought new servo motor as I needed some to pilot new switches in [my Lego train]({% post_url 2012-04-26-Using-netduino-and-.NET-Microframework-to-pilot-any-Lego-Power-Function-thru-Infrared-(part-3) %}). The problem is I didn’t found the same as the previous one. Another problem is that I needed to replace one which didn’t worked properly.
 

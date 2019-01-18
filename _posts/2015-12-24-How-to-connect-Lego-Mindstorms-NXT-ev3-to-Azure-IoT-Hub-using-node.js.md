@@ -3,6 +3,8 @@ layout: post
 title:  "How to connect Lego Mindstorms NXT ev3 to Azure IoT Hub using node.js"
 date: 2015-12-24 08:22:35 +0100
 categories: 
+author: "Laurent Ellerbach"
+thumbnails: "/assets/2015-12-24-thumb.jpg"
 ---
 Recently, I’ve played with node.js and Azure IoT Hub. You can see my previous blog posts [here]({% post_url 2015-11-13-Azure-IoT-Hub-uploading-a-Webcam-picture-in-an-Azure-blob-with-node.js-on-Windows-and-Linux %}), [here]({% post_url 2015-11-24-Creating-an-Azure-IoT-Device-Explorer-in-node.js,-express-and-jade %}) and [here]({% post_url 2015-12-01-How-to-deploy-a-node.js-site-into-Azure-Web-App-to-create-a-Website %}). And as I’m a huge fan of Lego, I’ve decided to connected my [Lego Mindstorms ev3](http://www.lego.com/en-us/mindstorms/) (the new version of NXT) to Azure IoT Hub. Well, at the end of the day, the ev3 is just a 32-bit ARM9 processor, Texas Instrument AM1808 cadenced at 300MHz. The main OS is Linux and it does have 1 USB port and 1 SD card reader. It does allow to boot on an SD card another OS so you don’t have to flash the main one. and on the USB port, you can plus a wifi dongle.
 

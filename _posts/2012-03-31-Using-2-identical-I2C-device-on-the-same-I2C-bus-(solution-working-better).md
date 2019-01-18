@@ -3,6 +3,8 @@ layout: post
 title:  "Using 2 identical I2C device on the same I2C bus (solution working better)"
 date: 2012-03-31 00:15:50 +0100
 categories: 
+author: "Laurent Ellerbach"
+thumbnails: "/assets/2012-03-31-thumb.jpg"
 ---
 [In one of my past posts]({% post_url 2012-02-24-Using-2-identical-I2C-device-on-the-same-I2C-bus %}) and with whom I’ve exchange a bit to find other solutions help me there two. Mario is coming from the electronic side and I come from the software side.  So he can correct me when I’m wrong with my electronic ![Sourire](/assets/4401.wlEmoticon-smile_2.png). And I was quite wrong with the previous solution trying to switch on and off the power of the sensors. Mario gave me couple of good reasons:
 

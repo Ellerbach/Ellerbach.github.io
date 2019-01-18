@@ -3,6 +3,8 @@ layout: post
 title:  "Web Server and CSS files in NETMF (.NET Microframework)"
 date: 2013-04-05 01:16:37 +0100
 categories: 
+author: "Laurent Ellerbach"
+thumbnails: "/assets/2013-04-05-thumb.jpg"
 ---
 It’s been a long time I did not write anything on my blog. Not that I haven’t developed anything but just because I did not take the time to write proper articles. I’ve continue to add features to my Lego city by piloting the trains but also the switches. And I’ll try to write articles to explain how to do that for all the features.
 

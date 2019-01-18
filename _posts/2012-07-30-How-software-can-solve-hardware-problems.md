@@ -3,6 +3,8 @@ layout: post
 title:  "How software can solve hardware problems"
 date: 2012-07-30 05:09:17 +0100
 categories: 
+author: "Laurent Ellerbach"
+thumbnails: "/assets/2012-07-30-thumb.jpg"
 ---
 I’ve developed my own sprinkler system and my own humidity sensor. This sensor is extremely simple as you can read in my [article]({% post_url 2012-07-17-A-soil-low-cost-humidity-sensor-(moisture)-and-.NET-Micro-Framework-(NETMF) %}). The main problem of this sensor is that the data to be read is an analogic data and the length of the cable is very long. There are lots of problems implied with long cables. You can read an excellent article from Mario Vernari [here](http://highfieldtales.wordpress.com/2012/04/25/effect-of-long-wiring-on-digital-signals/). In his article, you can clearly see the impact of an alimentation, of other signals into a long distance cable.
 

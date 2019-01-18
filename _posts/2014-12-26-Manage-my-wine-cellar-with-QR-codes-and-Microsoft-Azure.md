@@ -3,6 +3,8 @@ layout: post
 title:  "Manage my wine cellar with QR codes and Microsoft Azure"
 date: 2014-12-26 13:34:54 +0100
 categories: 
+author: "Laurent Ellerbach"
+thumbnails: "/assets/2014-12-26-thumb.jpg"
 ---
 I have quite “few” bottles of wine. I really do like wine a lot. Yes, I’m French ![Sourire](/assets/4401.wlEmoticon-smile_2.png) As for any resource you use a lot with lots of new items in and out almost every day, you start to have mistakes in your inventory. That’s what happen naturally to any inventory. And you need to rebuild it time to time to check if it’s still correct or not.
 

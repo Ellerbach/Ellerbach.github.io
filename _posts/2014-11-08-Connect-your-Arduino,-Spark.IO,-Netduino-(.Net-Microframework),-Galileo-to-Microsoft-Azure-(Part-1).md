@@ -3,6 +3,8 @@ layout: post
 title:  "Connect your Arduino, Spark.IO, Netduino (.Net Microframework), Galileo to Microsoft Azure (Part 1)"
 date: 2014-11-08 03:01:32 +0100
 categories: 
+author: "Laurent Ellerbach"
+thumbnails: "/assets/2014-11-08-thumb.jpg"
 ---
 Internet of Things (IoT) is exploding. Cost of processors and cost of electronic components is falling, electrical consumption is also getting lower and lower for more and more power. It’s now more than ever becoming to be super easy to create our own objects with some intelligence. Add to this technologies like Bluetooth Low Energy (BLE), some Wifi or GPRS low cost and low consumption, you can also add some connectivity, between each others and/or with Internet.
 

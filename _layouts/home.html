@@ -14,17 +14,31 @@ layout: default
     <ul class="post-list">
       {%- for post in site.posts -%}
       <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-          {{ post.content | strip_html | truncatewords:50 }}
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+          <span class="post-meta">{{ post.date | date: date_format }}</span>
+          <h3>
+            <a class="post-link" href="{{ post.url | relative_url }}">
+              {{ post.title | escape }}
+            </a>
+          {% if post.thumbnails %}          
+            <table class="mine"><tr class="mine.tr"><td class="mine.td" width="120px">
+              <img src="{{ post.thumbnails }}"  align="center" />
+              </td><td class="mine.td">              
+                    {{ post.content | strip_html | truncatewords:50 }}
+                  </h3>
+                  {%- if site.show_excerpts -%}
+                    {{ post.excerpt }}
+                  {%- endif -%}
+              </td>
+              </tr>
+            </table>
+          {% else %}           
+              {{ post.content | strip_html | truncatewords:50 }}
+            </h3>
+            {%- if site.show_excerpts -%}
+              {{ post.excerpt }}
+            {%- endif -%}
+        {% endif %}
       </li>
       {%- endfor -%}
     </ul>

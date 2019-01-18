@@ -3,6 +3,8 @@ layout: post
 title:  "How to use Microsoft Graph and Office 365 API in a Service or in a Windows App/UWP without a graphical interface"
 date: 2016-02-12 09:48:00 +0100
 categories: 
+author: "Laurent Ellerbach"
+thumbnails: "/assets/2016-02-12-thumb.jpg"
 ---
 Office 365 Graph is just a great way to add Office 365 integration into your application. You’ll find many great information in the [Office Dev Center](https://dev.office.com/) to explain more all what is available. I was interested in adding Office 365 integration in a normal Windows .NET Service on my serveur as well as on a RaspberryPi running Windows IoT Core in a Universal Windows Platform (UWP) application. I want to have a user which can automatically receive emails, do action based on those emails, send calendar items. 
 

@@ -3,6 +3,8 @@ layout: post
 title:  "Dynamically watermark a picture in a ASP.NET page"
 date: 2011-11-24 09:29:54 +0100
 categories: 
+author: "Laurent Ellerbach"
+thumbnails: "/assets/2011-11-24-thumb.jpg"
 ---
 In a [previous post]({% post_url 2011-11-15-Writing-a-generic-ASP.NET-handler-to-return-an-image-and-control-the-image %}), I’ve explain how to use generic ASP.NET handlers to display a picture. The concept is easy to use and perfect to manipulate any kind of document you want to output in your web server. There equivalent of this in technologies like PHP or Java but it’s so easy to do using ASP.NET. In my previous post, I’ve used VB, so I’ll continue with VB ![Sourire](/assets/4401.wlEmoticon-smile_2.png) Don’t worry, it’s as easy to do in C#!
 

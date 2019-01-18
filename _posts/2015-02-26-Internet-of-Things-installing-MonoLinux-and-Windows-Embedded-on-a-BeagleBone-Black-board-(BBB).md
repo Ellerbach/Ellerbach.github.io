@@ -3,6 +3,8 @@ layout: post
 title:  "Internet of Things: installing Mono/Linux and Windows Embedded on a BeagleBone Black board (BBB)"
 date: 2015-02-26 08:12:49 +0100
 categories: 
+author: "Laurent Ellerbach"
+thumbnails: "/assets/2015-02-26-thumb.jpg"
 ---
 The [BeagleBone Black](http://beagleboard.org/black), also called Beagle Bone Black or BBB is an interesting board. It’s an AM335x 1GHz ARM Cortex-A8 with 512M of DDR3, 4GB of flash and does have an HDMI, USB client and host interface. But what I prefer are the 2 times 46 pins to have tons of IO available. It does reduce a bit the number if you are using HDMI. But still, it’s an interesting board. On the not as good aspect the analogic entries are only 1.8V max and not protected (so you need to add a 1.8V Zener diode to protect all analogic entries.
 

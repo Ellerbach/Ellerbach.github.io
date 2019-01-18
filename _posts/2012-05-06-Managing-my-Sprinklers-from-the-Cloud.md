@@ -3,6 +3,8 @@ layout: post
 title:  "Managing my Sprinklers from the Cloud"
 date: 2012-05-06 23:32:50 +0100
 categories: 
+author: "Laurent Ellerbach"
+thumbnails: "/assets/2012-05-06-thumb.jpg"
 ---
 I’ve started a project to pilot my sprinklers remotely and make them smart almost [9 months ago]({% post_url 2011-09-09-netduino-board-geek-tool-for-.NET-Microframework %}). The idea is to be able to remotely open and close my sprinklers but also be able to launch automatic sprinkling cycles. 
 

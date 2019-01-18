@@ -3,6 +3,8 @@ layout: post
 title:  "Using 2 identical I2C device on the same I2C bus"
 date: 2012-02-24 09:12:36 +0100
 categories: 
+author: "Laurent Ellerbach"
+thumbnails: "/assets/2012-02-24-thumb.jpg"
 ---
 If you know a bit about I2C bus, it is impossible to use 2 identical devices with the same address on the bus. [Read my previous article]({% post_url 2012-02-21-Using-one-temperature-sensor-with-I2C-protocol-and-.NET-Micro-framework-on-netduino-board %}) to understand more on how it’s working. But as always, you can find trick to make it works.
 

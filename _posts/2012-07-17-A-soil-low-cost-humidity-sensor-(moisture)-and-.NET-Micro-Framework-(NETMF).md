@@ -3,6 +3,8 @@ layout: post
 title:  "A soil low cost humidity sensor (moisture) and .NET Micro Framework (NETMF)"
 date: 2012-07-17 18:22:40 +0100
 categories: 
+author: "Laurent Ellerbach"
+thumbnails: "/assets/2012-07-17-thumb.jpg"
 ---
 I’m working on my [own sprinkler system]({% post_url 2012-05-06-Managing-my-Sprinklers-from-the-Cloud %}) which I can pilot thru Internet wherever I am. I can add programs and also open and close sprinklers when I want. I recently build a [prototype of a humidity sensor]({% post_url 2012-06-24-A-low-cost-humidity-sensor-for-my-sprinkler-system %}). Now it’s time to implement this humidity sensor in pre production and see how it is working for real. Next phase will be an automatic piloting based on this humidity sensor. Thanks also to all the feedback I get which encourage me to continue those posts. I’m just a marketing guy doing hardware and software development ![Sourire](/assets/4401.wlEmoticon-smile_2.png)
 

@@ -3,6 +3,8 @@ layout: post
 title:  "Connect Arduino, Spark.IO, Netduino (NETMF .Net Microframework), to Microsoft Azure Mobile Services, create IoT (Part 3)"
 date: 2014-11-30 02:14:23 +0100
 categories: 
+author: "Laurent Ellerbach"
+thumbnails: "/assets/2014-11-30-thumb.jpg"
 ---
 In the 2 previous articles, we’ve created a local network of objects which communicate sensor information to a more smarter object which will post the information somewhere in the Cloud. Idea is to create a full Internet of Things (IoT) infrastructure. Those sensors are temperature, humidity (air and soil), wind direction as well as rain. Some have been just reused from Oregon Scientific and some have been developed from scratch using simple [Arduino](http://www.arduino.cc) or equivalent like [Spark.IO](http://spark.io). 
 

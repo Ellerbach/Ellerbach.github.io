@@ -3,6 +3,8 @@ layout: post
 title:  "How to deploy a node.js site into Azure Web App to create a Website"
 date: 2015-12-01 01:47:30 +0100
 categories: 
+author: "Laurent Ellerbach"
+thumbnails: "/assets/2015-12-01-thumb.jpg"
 ---
 There is quite a good documentation on the Azure website on how to deploy an Azure WebApp when using node.js and Git repository from a Mac. Documentation is [here](https://azure.microsoft.com/en-us/documentation/articles/web-sites-nodejs-develop-deploy-mac/).
 

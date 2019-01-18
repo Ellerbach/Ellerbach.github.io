@@ -3,6 +3,8 @@ layout: post
 title:  "Using a SPI device with netduino and .NET micro framework"
 date: 2012-05-22 11:27:04 +0100
 categories: 
+author: "Laurent Ellerbach"
+thumbnails: "/assets/2012-05-22-thumb.jpg"
 ---
 After playing with I2C, with various IO, I’ve decided to play a bit with SPI ![Sourire](/assets/4401.wlEmoticon-smile_2.png) The real project behind using a SPI device is to be able to use it a a multiplexer/demultipler of IO.
 

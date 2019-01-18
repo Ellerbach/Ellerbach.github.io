@@ -3,6 +3,8 @@ layout: post
 title:  "Using a light transistor sensor and a led to create a detector"
 date: 2012-01-21 01:17:38 +0100
 categories: 
+author: "Laurent Ellerbach"
+thumbnails: "/assets/2012-01-21-thumb.jpg"
 ---
 I will give a session in French during the next French TechDays on .NET Microframework. And I’m preparing couple of demos that almost anyone with limited knowledge in electronic and limited knowledge in programming. The idea is to show cool stuff you can do at home or a kid can do. Interested in coming to my session and more? You can register [there](http://www.microsoft.com/france/mstechdays/programmes/parcours.aspx#SessionID=f9a8f69e-723a-40d1-8dc0-c306f4cddfb5).
 
