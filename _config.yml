@@ -16,7 +16,7 @@
 title: Laurent Ellerbach
 email: laurelle@microsoft.com
 description: >- # this means to ignore newlines until "baseurl:"  
-  Internet of Things, IoT, .NET Core, C#, .Net, Linux, Arduino, Netduino, Spark.IO, NETMF, .NET Microframework and other embedded gadgets :-)
+  Internet of Things, .NET IoT, .NET nanoFramework, IoT, .NET Core, C#, .Net, Linux, Arduino, Netduino, Spark.IO, NETMF, .NET Microframework and other embedded gadgets :-)
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: Ellerbach
