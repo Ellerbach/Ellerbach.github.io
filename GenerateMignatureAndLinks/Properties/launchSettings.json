@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "GenerateMignatureAndLinks": {
+      "commandName": "Project",
+      "workingDirectory": "C:\\Repos\\Ellerbach.github.io"
+    }
+  }
+}

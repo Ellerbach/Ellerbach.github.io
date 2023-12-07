@@ -1,14 +1,10 @@
----
-layout: page
-title: About
-permalink: /about/
----
+# About Laurent Ellerbach
 
 ![Laurent](https://avatars0.githubusercontent.com/u/8145578?s=460&v=4)
 
-Laurent Ellerbach
+[Laurent Ellerbach](https://www.linkedin.com/in/laurelle)
 Principal Sofware Engineer Manager
-Commmercial Software Engineering
+Industry Software Engineering
 Microsoft
 
 This blog regroup technical articles which I have published over time. This blog is a migration of an existing blog up to 2018. I kept only the technical articles and removed the non technical ones. So please note that some links may be broken. Please don't hesitate to report them to me.
