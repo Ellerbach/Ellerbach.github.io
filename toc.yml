@@ -1,0 +1,5 @@
+items:
+- name: Blog posts
+  href: blog-posts/index.md
+- name: About Laurent Ellerbach
+  href: about.md

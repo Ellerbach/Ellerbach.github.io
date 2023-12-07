@@ -1,0 +1,38 @@
+{
+    "build": {
+        "content": [
+          { "files": [ "*.md", "toc.yml", "blog-posts/**.{md,yml}","x-cross/toc.yml" ] }
+        ],
+        "resource": [
+          { "files": ["assets/**"] }
+        ],
+        "dest": "_site",
+        "globalMetadata": {
+          "_appTitle": "Laurent Ellerbach's blog",
+          "_appName": "Laurent Ellerbach's blog",
+          "_appLogoPath": "assets/logo.png",
+          "_appFaviconPath": "assets/favicon.png",
+          "_enableSearch": true,
+          "_enableNewTab": true,
+          "_gitContribute": {
+            "branch": "main"
+          }
+        },
+        "globalMetadataFiles": [],
+        "fileMetadataFiles": [],
+        "template": ["default", "modern", "templates/material"],
+        "postProcessors": [],
+        "noLangKeyword": false,
+        "keepFileLink": false,
+        "disableGitFeatures": false,
+        "xrefService": ["https://xref.docs.microsoft.com/query?uid={uid}"],
+        "markdownEngineName": "markdig",
+        "markdownEngineProperties": {
+          "markdigExtensions": [
+            "tasklists",
+            "diagrams"
+          ]
+        }
+      },
+    "postProcessors": ["ExtractSearchIndex"]
+}

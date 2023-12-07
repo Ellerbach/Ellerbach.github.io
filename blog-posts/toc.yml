@@ -1,0 +1,138 @@
+# This is an automatically generated file
+items:
+- name: Blog posts
+  href: index.md
+- name: 2006 08 06 J'ai hacké mon onduleur ou le reverse engineering de protocoles de communication part 1
+  href: 2006-08-06-J'ai-hacké-mon-onduleur-ou-le-reverse-engineering-de-protocoles-de-communication-(part-1).md
+- name: 2006 08 07 J'ai hacké mon onduleur ou le reverse engineering de protocoles de communication part 2
+  href: 2006-08-07-J'ai-hacké-mon-onduleur-ou-le-reverse-engineering-de-protocoles-de-communication-(part-2).md
+- name: 2006 08 08 J'ai hacké mon onduleur ou le reverse engineering de protocoles de communication part 3
+  href: 2006-08-08-J'ai-hacké-mon-onduleur-ou-le-reverse-engineering-de-protocoles-de-communication-(part-3).md
+- name: 2006 08 09 J'ai hacké mon onduleur ou le reverse engineering de protocoles de communication part 4
+  href: 2006-08-09-J'ai-hacké-mon-onduleur-ou-le-reverse-engineering-de-protocoles-de-communication-(part-4).md
+- name: 2006 08 12 J'ai hacké mon onduleur ou le reverse engineering de protocoles de communication part 5
+  href: 2006-08-12-J'ai-hacké-mon-onduleur-ou-le-reverse-engineering-de-protocoles-de-communication-(part-5).md
+- name: 2006 08 15 J'ai hacké mon onduleur ou le reverse engineering de protocoles de communication part 6
+  href: 2006-08-15-J'ai-hacké-mon-onduleur-ou-le-reverse-engineering-de-protocoles-de-communication-(part-6).md
+- name: 2006 09 01 J'ai hacké mon onduleur ou le reverse engineering de protocoles de communication part 8
+  href: 2006-09-01-J'ai-hacké-mon-onduleur-ou-le-reverse-engineering-de-protocoles-de-communication-(part-8).md
+- name: 2006 09 14 J'ai hacké mon onduleur ou le reverse engineering de protocoles de communication part 9
+  href: 2006-09-14-J'ai-hacké-mon-onduleur-ou-le-reverse-engineering-de-protocoles-de-communication-(part-9).md
+- name: 2006 10 18 J'ai hacké mon onduleur ou le reverse engineering de protocoles de communication part 10
+  href: 2006-10-18-J'ai-hacké-mon-onduleur-ou-le-reverse-engineering-de-protocoles-de-communication-(part-10).md
+- name: 2011 09 09 netduino board geek tool for .NET Microframework
+  href: 2011-09-09-netduino-board-geek-tool-for-.NET-Microframework.md
+- name: 2011 09 12 Implementing a simple HTTP server in .NET Microframework
+  href: 2011-09-12-Implementing-a-simple-HTTP-server-in-.NET-Microframework.md
+- name: 2011 09 13 Setup a time and date using .NET Microframework
+  href: 2011-09-13-Setup-a-time-and-date-using-.NET-Microframework.md
+- name: 2011 09 19 Displaying a calendar in a web page using .NET Microframework
+  href: 2011-09-19-Displaying-a-calendar-in-a-web-page-using-.NET-Microframework.md
+- name: 2011 09 26 Program a date time and duration for a sprinkler in .NET Microframework and netduino
+  href: 2011-09-26-Program-a-date-time-and-duration-for-a-sprinkler-in-.NET-Microframework-and-netduino.md
+- name: 2011 10 06 Creating and launching timer in .NET Microframework
+  href: 2011-10-06-Creating-and-launching-timer-in-.NET-Microframework.md
+- name: 2011 10 11 Lighting my Lego city using .NET Microframework
+  href: 2011-10-11-Lighting-my-Lego-city-using-.NET-Microframework.md
+- name: 2011 10 22 Display overlay images in HTML and javascript with .NET Microframework
+  href: 2011-10-22-Display-overlay-images-in-HTML-and-javascript-with-.NET-Microframework.md
+- name: 2011 10 24 Reading file in .NET Microframework
+  href: 2011-10-24-Reading-file-in-.NET-Microframework.md
+- name: 2011 11 04 Read a setup file in .NET Microframework
+  href: 2011-11-04-Read-a-setup-file-in-.NET-Microframework.md
+- name: 2011 11 15 Writing a generic ASP.NET handler to return an image and control the image
+  href: 2011-11-15-Writing-a-generic-ASP.NET-handler-to-return-an-image-and-control-the-image.md
+- name: 2011 11 24 Dynamically watermark a picture in a ASP.NET page
+  href: 2011-11-24-Dynamically-watermark-a-picture-in-a-ASP.NET-page.md
+- name: 2011 12 07 Creating dynamically a web page using .NET Micro framework
+  href: 2011-12-07-Creating-dynamically-a-web-page-using-.NET-Micro-framework.md
+- name: 2011 12 12 ASP.NET and .NET Microframework HTTP web server together part 1/2
+  href: 2011-12-12-ASP.NET-and-.NET-Microframework-HTTP-web-server-together-(part-12).md
+- name: 2011 12 19 ASP.NET and .NET Microframework HTTP web server together part 2/2
+  href: 2011-12-19-ASP.NET-and-.NET-Microframework-HTTP-web-server-together-(part-22).md
+- name: 2012 01 21 Using a light transistor sensor and a led to create a detector
+  href: 2012-01-21-Using-a-light-transistor-sensor-and-a-led-to-create-a-detector.md
+- name: 2012 02 14 Securing web server with login and password on .NET Microframework
+  href: 2012-02-14-Securing-web-server-with-login-and-password-on-.NET-Microframework.md
+- name: 2012 02 17 Using basic IO with .NET Microframework
+  href: 2012-02-17-Using-basic-IO-with-.NET-Microframework.md
+- name: 2012 02 20 Some hard to pilot a Sprinkler with .NET Microframework
+  href: 2012-02-20-Some-hard-to-pilot-a-Sprinkler-with-.NET-Microframework.md
+- name: 2012 02 21 Using one temperature sensor with I2C protocol and .NET Micro framework on netduino board
+  href: 2012-02-21-Using-one-temperature-sensor-with-I2C-protocol-and-.NET-Micro-framework-on-netduino-board.md
+- name: 2012 02 24 Using 2 identical I2C device on the same I2C bus
+  href: 2012-02-24-Using-2-identical-I2C-device-on-the-same-I2C-bus.md
+- name: 2012 03 03 Create your own mobile video recorder or animation stand
+  href: 2012-03-03-Create-your-own-mobile-video-recorder-or-animation-stand.md
+- name: 2012 03 31 Using 2 identical I2C device on the same I2C bus solution working better
+  href: 2012-03-31-Using-2-identical-I2C-device-on-the-same-I2C-bus-(solution-working-better).md
+- name: 2012 04 07 Using netduino and .NET Microframework to pilot any Lego Power Function thru Infrared part 1
+  href: 2012-04-07-Using-netduino-and-.NET-Microframework-to-pilot-any-Lego-Power-Function-thru-Infrared-(part-1).md
+- name: 2012 04 17 Using netduino and .NET Microframework to pilot any Lego Power Function thru Infrared part 2
+  href: 2012-04-17-Using-netduino-and-.NET-Microframework-to-pilot-any-Lego-Power-Function-thru-Infrared-(part-2).md
+- name: 2012 04 26 Using netduino and .NET Microframework to pilot any Lego Power Function thru Infrared part 3
+  href: 2012-04-26-Using-netduino-and-.NET-Microframework-to-pilot-any-Lego-Power-Function-thru-Infrared-(part-3).md
+- name: 2012 05 06 Managing my Sprinklers from the Cloud
+  href: 2012-05-06-Managing-my-Sprinklers-from-the-Cloud.md
+- name: 2012 05 22 Using a SPI device with netduino and .NET micro framework
+  href: 2012-05-22-Using-a-SPI-device-with-netduino-and-.NET-micro-framework.md
+- name: 2012 05 29 Creating an efficient HTTP Web Server for .NET Microframework NETMF
+  href: 2012-05-29-Creating-an-efficient-HTTP-Web-Server-for-.NET-Microframework-(NETMF).md
+- name: 2012 06 20 Using XMLHttpRequest to pilot a Lego train dynamically in HTML 5
+  href: 2012-06-20-Using-XMLHttpRequest-to-pilot-a-Lego-train-dynamically-in-HTML-5.md
+- name: 2012 06 24 A low cost humidity sensor for my sprinkler system
+  href: 2012-06-24-A-low-cost-humidity-sensor-for-my-sprinkler-system.md
+- name: 2012 07 17 A soil low cost humidity sensor moisture and .NET Micro Framework NETMF
+  href: 2012-07-17-A-soil-low-cost-humidity-sensor-(moisture)-and-.NET-Micro-Framework-(NETMF).md
+- name: 2012 07 30 How software can solve hardware problems
+  href: 2012-07-30-How-software-can-solve-hardware-problems.md
+- name: 2013 04 05 Web Server and CSS files in NETMF .NET Microframework
+  href: 2013-04-05-Web-Server-and-CSS-files-in-NETMF-(.NET-Microframework).md
+- name: 2013 04 07 .NET Microframework NETMF Web Server source code available
+  href: 2013-04-07-.NET-Microframework-(NETMF)-Web-Server-source-code-available.md
+- name: 2013 04 29 Adding Bluetooth support to a NETMF board .NET Microframework
+  href: 2013-04-29-Adding-Bluetooth-support-to-a-NETMF-board-(.NET-Microframework).md
+- name: 2013 05 27 Ultrasound sensor and .NET Microframework NETMF
+  href: 2013-05-27-Ultrasound-sensor-and-.NET-Microframework-(NETMF).md
+- name: 2013 06 21 .NET Microframework on RaspberryPi Part 1
+  href: 2013-06-21-.NET-Microframework-on-RaspberryPi-(Part-1).md
+- name: 2014 10 25 .NET Microframework on RaspberryPi Part 2
+  href: 2014-10-25-.NET-Microframework-on-RaspberryPi-(Part-2).md
+- name: 2014 11 08 Connect your Arduino, Spark.IO, Netduino .Net Microframework, Galileo to Microsoft Azure Part 1
+  href: 2014-11-08-Connect-your-Arduino,-Spark.IO,-Netduino-(.Net-Microframework),-Galileo-to-Microsoft-Azure-(Part-1).md
+- name: 2014 11 14 Connect your Arduino, Spark.IO, Netduino NETMF .Net Microframework, Galileo to Microsoft Azure Part 2 to create an Internet of Things IoT
+  href: 2014-11-14-Connect-your-Arduino,-Spark.IO,-Netduino-(NETMF-.Net-Microframework),-Galileo-to-Microsoft-Azure-(Part-2)-to-create-an-Internet-of-Things-(IoT).md
+- name: 2014 11 30 Connect Arduino, Spark.IO, Netduino NETMF .Net Microframework, to Microsoft Azure Mobile Services, create IoT Part 3
+  href: 2014-11-30-Connect-Arduino,-Spark.IO,-Netduino-(NETMF-.Net-Microframework),-to-Microsoft-Azure-Mobile-Services,-create-IoT-(Part-3).md
+- name: 2014 12 26 Manage my wine cellar with QR codes and Microsoft Azure
+  href: 2014-12-26-Manage-my-wine-cellar-with-QR-codes-and-Microsoft-Azure.md
+- name: 2015 01 09 Servo motor tester in NETMF .NET Micro Framework with Netduino
+  href: 2015-01-09-Servo-motor-tester-in-NETMF-(.NET-Micro-Framework)-with-Netduino.md
+- name: 2015 02 26 Internet of Things installing Mono/Linux and Windows Embedded on a BeagleBone Black board BBB
+  href: 2015-02-26-Internet-of-Things-installing-MonoLinux-and-Windows-Embedded-on-a-BeagleBone-Black-board-(BBB).md
+- name: 2015 04 11 Create a DHT11 C library using WiringPI on RaspberryPI and use it in Mono C
+  href: 2015-04-11-Create-a-DHT11-C-library-using-WiringPI-on-RaspberryPI-and-use-it-in-Mono-C.md
+- name: 2015 06 18 ESP8266 and Posting on Windows Azure using Mobile Services
+  href: 2015-06-18-ESP8266-and-Posting-on-Windows-Azure-using-Mobile-Services.md
+- name: 2015 10 01 How to move Azure VM between subscriptions
+  href: 2015-10-01-How-to-move-Azure-VM-between-subscriptions.md
+- name: 2015 11 13 Azure IoT Hub uploading a Webcam picture in an Azure blob with node.js on Windows and Linux
+  href: 2015-11-13-Azure-IoT-Hub-uploading-a-Webcam-picture-in-an-Azure-blob-with-node.js-on-Windows-and-Linux.md
+- name: 2015 11 24 Creating an Azure IoT Device Explorer in node.js, express and jade
+  href: 2015-11-24-Creating-an-Azure-IoT-Device-Explorer-in-node.js,-express-and-jade.md
+- name: 2015 12 01 How to deploy a node.js site into Azure Web App to create a Website
+  href: 2015-12-01-How-to-deploy-a-node.js-site-into-Azure-Web-App-to-create-a-Website.md
+- name: 2015 12 24 How to connect Lego Mindstorms NXT ev3 to Azure IoT Hub using node.js
+  href: 2015-12-24-How-to-connect-Lego-Mindstorms-NXT-ev3-to-Azure-IoT-Hub-using-node.js.md
+- name: 2016 02 12 How to use Microsoft Graph and Office 365 API in a Service or in a Windows App/UWP without a graphical interface
+  href: 2016-02-12-How-to-use-Microsoft-Graph-and-Office-365-API-in-a-Service-or-in-a-Windows-AppUWP-without-a-graphical-interface.md
+- name: 2016 08 17 J'ai hacké mon onduleur ou le reverse engineering de protocoles de communication part 7
+  href: 2006-08-17-J'ai-hacké-mon-onduleur-ou-le-reverse-engineering-de-protocoles-de-communication-(part-7).md
+- name: 2017 07 04 Accessing embedded serial ports in .NET Core 2.0 on a Raspberry PI 3 running Linux
+  href: 2017-07-04-Accessing-embedded-serial-ports-in-.NET-Core-2.0-on-a-Raspberry-PI-3-running-Linux.md
+- name: 2018 08 17 Azure IoT Edge support for Raspbian 8.0/Debian 8.0
+  href: 2018-08-17-Azure-IoT-Edge-support-for-Raspbian-8.0Debian-8.0.md
+- name: 2021 03 26 Monorepo for Beginners
+  href: 2021-03-26-Monorepo-for-Beginners.md
+- name: 2023 04 04 Lego Dimensions Communication Protocol
+  href: 2023-04-04-LegoDimensionsProtocol.md
