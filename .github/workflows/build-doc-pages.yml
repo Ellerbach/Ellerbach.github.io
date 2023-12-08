@@ -44,13 +44,12 @@ jobs:
         continue-on-error: true
         run: |
           markdownlint **/*.md
-          DocLinkChecker -d ./docs -a
 
       - name: Generate Table of Contents
         shell: pwsh
         continue-on-error: false
         run: |
-          DocFxTocGenerator -d ./docs -si
+          DocFxTocGenerator -d ./blog-posts -o ./blog-posts -si
 
       - name: Build and create index
         shell: pwsh
