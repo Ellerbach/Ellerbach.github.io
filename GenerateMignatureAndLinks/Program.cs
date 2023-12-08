@@ -29,7 +29,7 @@ foreach (string file in Directory.EnumerateFiles(blogPath, "*.md"))
 
 // Generate the content
 StringBuilder sb = new StringBuilder();
-foreach (var file in blogs)
+foreach (var file in blogs.OrderByDescending(b => b))
 {
     // extract the date from the file name
     var date = file.Substring(file.LastIndexOf(Path.DirectorySeparatorChar) + 1, 10);
