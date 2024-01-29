@@ -1,4 +1,4 @@
-# Solving device discovery and capabilities
+# 2024-01-22 Solving device discovery and capabilities
 
 The challenge of device discovery and capabilities arises from the increasing diversity of embedded devices in modern technology ecosystems. As developers strive to create seamless user experiences across various platforms, identifying and managing devices, along with understanding their capabilities, becomes crucial. This article explores strategies to address these challenges, ensuring efficient device discovery and optimal utilization of features in applications. I will use [.NET nanoFramework](https://www.nanoframework.net) as an illustration but this is applicable to any kind of device!
 
