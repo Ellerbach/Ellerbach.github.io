@@ -1,0 +1,9 @@
+items:
+- name: Projects overview
+  href: index.md
+- name: Azure AI Search Simulator
+  href: azure-ai-search-simulator/
+- name: DocFX Companion Tools
+  href: docfx-companion-tools/
+- name: LEGO Dimensions
+  href: lego-dimensions/

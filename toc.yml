@@ -1,5 +1,9 @@
 items:
+- name: Home
+  href: index.md
+- name: Projects
+  href: docs/
 - name: Blog posts
   href: blog-posts/index.md
-- name: About Laurent Ellerbach
+- name: About
   href: about.md

@@ -46,9 +46,6 @@ foreach (var file in blogs.OrderByDescending(b => b))
 }
 
 // Open the index and replace the <bloglist> tag
-ReplacePlaceholder(Path.Combine(repoRoot, "index.md"), "bloglist", sb.ToString());
-
-// Open the index and replace the <bloglist> tag
 ReplacePlaceholder(Path.Combine(repoRoot, "blog-posts", "index.md"), "bloglist", sb.ToString().Replace("./assets/", "../assets/").Replace("./blog-posts/", "./"));
 
 string GetCleanedFileName(string cleanedName)

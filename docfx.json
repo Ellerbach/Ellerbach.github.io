@@ -1,15 +1,15 @@
 {
     "build": {
         "content": [
-          { "files": [ "*.md", "toc.yml", "blog-posts/**.{md,yml}","x-cross/toc.yml" ] }
+          { "files": [ "*.md", "toc.yml", "blog-posts/**.{md,yml}", "docs/**.{md,yml}", "x-cross/toc.yml" ] }
         ],
         "resource": [
-          { "files": ["assets/**"] }
+          { "files": ["assets/**", "docs/**/*.{png,jpg,jpeg,gif,svg,webp}"] }
         ],
         "dest": "_site",
         "globalMetadata": {
-          "_appTitle": "Laurent Ellerbach's blog",
-          "_appName": "Laurent Ellerbach's blog",
+          "_appTitle": "Laurent Ellerbach | Projects and notes",
+          "_appName": "Laurent Ellerbach",
           "_appLogoPath": "assets/logo.png",
           "_appFaviconPath": "assets/favicon.png",
           "_enableSearch": true,

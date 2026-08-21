@@ -1,6 +1,10 @@
 _site
 **/.vs
 .vscode
+docs/azure-ai-search-simulator/content/
+docs/docfx-companion-tools/content/
+docs/lego-dimensions/content/
+docs/lego-dimensions/wiki/
 
 # Files built by Visual Studio
 *_i.c

@@ -1,0 +1,7 @@
+# This is an automatically generated file
+- name: Project overview
+  href: index.md
+- name: Minifigures and Vehicles
+  href: wiki/toc.yml
+- name: Project documentation
+  href: content/toc.yml

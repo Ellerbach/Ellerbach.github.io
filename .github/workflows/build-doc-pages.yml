@@ -40,6 +40,127 @@ jobs:
           dotnet tool install DocFxTocGenerator -g
           dotnet tool install DocFx -g 
 
+      - name: Import project documentation
+        shell: pwsh
+        continue-on-error: false
+        run: |
+          $imports = @(
+            @{
+              Repository = "https://github.com/Ellerbach/docfx-companion-tools.git"
+              Destination = "./docs/docfx-companion-tools/content"
+            },
+            @{
+              Repository = "https://github.com/Ellerbach/azure-ai-search-simulator.git"
+              Destination = "./docs/azure-ai-search-simulator/content"
+            },
+            @{
+              Repository = "https://github.com/Ellerbach/LegoDimensions.git"
+              Destination = "./docs/lego-dimensions/content"
+            }
+          )
+
+          $stagingRoot = Join-Path $env:RUNNER_TEMP "project-docs"
+          Remove-Item $stagingRoot -Recurse -Force -ErrorAction SilentlyContinue
+          New-Item $stagingRoot -ItemType Directory | Out-Null
+
+          foreach ($import in $imports) {
+            $repositoryName = [IO.Path]::GetFileNameWithoutExtension($import.Repository)
+            $clonePath = Join-Path $stagingRoot $repositoryName
+
+            Remove-Item $import.Destination -Recurse -Force -ErrorAction SilentlyContinue
+            New-Item $import.Destination -ItemType Directory -Force | Out-Null
+            git clone --depth 1 $import.Repository $clonePath
+
+            Get-ChildItem $clonePath -Recurse -File -Filter "*.md" |
+              Where-Object FullName -NotMatch "[\\/]\.github[\\/]" |
+              ForEach-Object {
+              $relativePath = $_.FullName.Substring($clonePath.Length + 1)
+              $destinationPath = Join-Path $import.Destination $relativePath
+              New-Item (Split-Path $destinationPath) -ItemType Directory -Force | Out-Null
+              Copy-Item $_.FullName $destinationPath
+            }
+          }
+
+          $wikiClonePath = Join-Path $stagingRoot "LegoDimensions.wiki"
+          $wikiDestination = "./docs/lego-dimensions/wiki"
+          Remove-Item $wikiDestination -Recurse -Force -ErrorAction SilentlyContinue
+          New-Item $wikiDestination -ItemType Directory -Force | Out-Null
+          git clone --depth 1 "https://github.com/Ellerbach/LegoDimensions.wiki.git" $wikiClonePath
+          Get-ChildItem $wikiClonePath -Force |
+            Where-Object Name -ne ".git" |
+            Copy-Item -Destination $wikiDestination -Recurse -Force
+
+          Remove-Item "$wikiDestination/_Sidebar.md", "$wikiDestination/_Footer.md" -Force -ErrorAction SilentlyContinue
+          Move-Item "$wikiDestination/.attachments" "$wikiDestination/attachments"
+          Move-Item "$wikiDestination/Home.md" "$wikiDestination/index.md"
+
+          $wikiLinkPattern = '(?<!!)(?<prefix>\[[^\]]*\]\()(?<target>(?!https?://|mailto:|#)[^)#]+?)(?<anchor>#[^)]*)?\)'
+          $wikiPages = @{}
+          Get-ChildItem $wikiDestination -File -Filter "*.md" | ForEach-Object {
+            $pageKey = ($_.BaseName -replace "[^A-Za-z0-9]", "").ToLowerInvariant()
+            $wikiPages[$pageKey] = $_.BaseName
+          }
+
+          Get-ChildItem $wikiDestination -File -Filter "*.md" | ForEach-Object {
+            $content = Get-Content $_.FullName -Raw
+            $content = $content.Replace(
+              "https://github.com/Ellerbach/LegoDimensions/wiki/.attachments/",
+              "attachments/")
+            $content = [regex]::Replace($content, $wikiLinkPattern, {
+              param($match)
+
+              $target = $match.Groups["target"].Value
+              $targetKey = ([uri]::UnescapeDataString($target) -replace "[^A-Za-z0-9]", "").ToLowerInvariant()
+              if (-not $wikiPages.ContainsKey($targetKey)) {
+                return $match.Value
+              }
+
+              $pageTarget = [uri]::EscapeDataString($wikiPages[$targetKey])
+              $anchor = $match.Groups["anchor"].Value
+              return "$($match.Groups["prefix"].Value)$pageTarget.md$anchor)"
+            })
+            Set-Content $_.FullName $content -NoNewline
+          }
+
+          Set-Content "./docs/docfx-companion-tools/.override" @"
+          index;Project overview
+          content;Documentation
+          tools;Tools catalog
+          "@
+          Set-Content "./docs/docfx-companion-tools/content/.override" @"
+          README;Overview
+          src;Tools
+          "@
+          Set-Content "./docs/docfx-companion-tools/content/.ignore" "DocExamples"
+          Set-Content "./docs/docfx-companion-tools/content/src/.override" @"
+          src;Tools
+          index;Tools overview
+          DocAssembler;DocAssembler
+          DocLinkChecker;DocLinkChecker
+          DocFxOpenApi;DocFxOpenApi
+          DocFxTocGenerator;DocFxTocGenerator
+          DocLanguageTranslator;DocLanguageTranslator
+          "@
+          Set-Content "./docs/azure-ai-search-simulator/.override" @"
+          index;Project overview
+          content;Documentation
+          getting-started;Get started
+          "@
+          Set-Content "./docs/azure-ai-search-simulator/content/.override" @"
+          README;Overview
+          docs;Guides and reference
+          samples;Samples
+          "@
+          Set-Content "./docs/azure-ai-search-simulator/content/docs/.override" "index;Guides and reference"
+          Set-Content "./docs/azure-ai-search-simulator/content/samples/.override" "index;Samples overview"
+          Set-Content "./docs/azure-ai-search-simulator/content/samples/sample-data/.override" "index;Sample data overview"
+          Set-Content "./docs/lego-dimensions/.override" @"
+          index;Project overview
+          content;Project documentation
+          wiki;Minifigures and Vehicles
+          "@
+          Set-Content "./docs/lego-dimensions/wiki/.override" "index;Minifigures and Vehicles"
+
       - name: Validate documentation
         continue-on-error: true
         run: |
@@ -50,6 +171,30 @@ jobs:
         continue-on-error: false
         run: |
           DocFxTocGenerator -d ./blog-posts -o ./blog-posts -si
+          DocFxTocGenerator -d ./docs/docfx-companion-tools -o ./docs/docfx-companion-tools --multitoc 10 --folderRef IndexReadme --ordering FoldersFirst --indexing NoDefault --override --ignore
+          DocFxTocGenerator -d ./docs/azure-ai-search-simulator -o ./docs/azure-ai-search-simulator --multitoc 10 --folderRef IndexReadme --ordering FoldersFirst --indexing NoDefault --override
+          DocFxTocGenerator -d ./docs/lego-dimensions -o ./docs/lego-dimensions --multitoc 10 --folderRef IndexReadme --ordering FoldersFirst --indexing NoDefault --override
+
+          @(
+            "# Samples",
+            "",
+            "Use these samples to connect official Azure AI Search SDKs, notebooks, and custom skills to the local simulator.",
+            "",
+            "## Client and SDK samples",
+            "",
+            "- [Azure SDK Sample](AzureSdkSample/README.md) - Use the official .NET Azure Search Documents SDK.",
+            "- [Azure AI Search Notebook](AzureSearchNotebook/README.md) - Explore the simulator with the Python SDK in Jupyter.",
+            "- [Indexer Test Notebook](IndexerTestNotebook/README.md) - Exercise indexer workflows from a notebook.",
+            "",
+            "## AI enrichment samples",
+            "",
+            "- [Custom Skills Sample](CustomSkillSample/README.md) - Build and call a custom Web API skill.",
+            "- [Embedding Skill Notebook](EmbeddingSkillNotebook/README.md) - Generate embeddings and test vector search.",
+            "",
+            "## Sample data",
+            "",
+            "Browse the [sample data collection](sample-data/index.md) used by extraction and indexing scenarios."
+          ) | Set-Content "./docs/azure-ai-search-simulator/content/samples/index.md"
 
       - name: Build and create index
         shell: pwsh
