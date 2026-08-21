@@ -1,0 +1,7 @@
+# This is an automatically generated file
+- name: Project overview
+  href: index.md
+- name: Documentation
+  href: content/toc.yml
+- name: Get started
+  href: getting-started.md

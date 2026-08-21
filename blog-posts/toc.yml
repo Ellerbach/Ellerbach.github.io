@@ -1,6 +1,5 @@
 # This is an automatically generated file
-items:
-- name: Blog posts
+- name: Welcome to Laurent Ellerbach's old blog
   href: index.md
 - name: 2006 08 06 J'ai hacké mon onduleur ou le reverse engineering de protocoles de communication part 1
   href: 2006-08-06-J'ai-hacké-mon-onduleur-ou-le-reverse-engineering-de-protocoles-de-communication-(part-1).md
@@ -14,6 +13,8 @@ items:
   href: 2006-08-12-J'ai-hacké-mon-onduleur-ou-le-reverse-engineering-de-protocoles-de-communication-(part-5).md
 - name: 2006 08 15 J'ai hacké mon onduleur ou le reverse engineering de protocoles de communication part 6
   href: 2006-08-15-J'ai-hacké-mon-onduleur-ou-le-reverse-engineering-de-protocoles-de-communication-(part-6).md
+- name: 2006 08 17 J'ai hacké mon onduleur ou le reverse engineering de protocoles de communication part 7
+  href: 2006-08-17-J'ai-hacké-mon-onduleur-ou-le-reverse-engineering-de-protocoles-de-communication-(part-7).md
 - name: 2006 09 01 J'ai hacké mon onduleur ou le reverse engineering de protocoles de communication part 8
   href: 2006-09-01-J'ai-hacké-mon-onduleur-ou-le-reverse-engineering-de-protocoles-de-communication-(part-8).md
 - name: 2006 09 14 J'ai hacké mon onduleur ou le reverse engineering de protocoles de communication part 9
@@ -110,7 +111,7 @@ items:
   href: 2015-01-09-Servo-motor-tester-in-NETMF-(.NET-Micro-Framework)-with-Netduino.md
 - name: 2015 02 26 Internet of Things installing Mono/Linux and Windows Embedded on a BeagleBone Black board BBB
   href: 2015-02-26-Internet-of-Things-installing-MonoLinux-and-Windows-Embedded-on-a-BeagleBone-Black-board-(BBB).md
-- name: 2015 04 11 Create a DHT11 C library using WiringPI on RaspberryPI and use it in Mono C
+- name: 2015 04 11 Create a DHT11 C library using WiringPI on RaspberryPI and use it in Mono C#
   href: 2015-04-11-Create-a-DHT11-C-library-using-WiringPI-on-RaspberryPI-and-use-it-in-Mono-C.md
 - name: 2015 06 18 ESP8266 and Posting on Windows Azure using Mobile Services
   href: 2015-06-18-ESP8266-and-Posting-on-Windows-Azure-using-Mobile-Services.md
@@ -126,8 +127,6 @@ items:
   href: 2015-12-24-How-to-connect-Lego-Mindstorms-NXT-ev3-to-Azure-IoT-Hub-using-node.js.md
 - name: 2016 02 12 How to use Microsoft Graph and Office 365 API in a Service or in a Windows App/UWP without a graphical interface
   href: 2016-02-12-How-to-use-Microsoft-Graph-and-Office-365-API-in-a-Service-or-in-a-Windows-AppUWP-without-a-graphical-interface.md
-- name: 2016 08 17 J'ai hacké mon onduleur ou le reverse engineering de protocoles de communication part 7
-  href: 2006-08-17-J'ai-hacké-mon-onduleur-ou-le-reverse-engineering-de-protocoles-de-communication-(part-7).md
 - name: 2017 07 04 Accessing embedded serial ports in .NET Core 2.0 on a Raspberry PI 3 running Linux
   href: 2017-07-04-Accessing-embedded-serial-ports-in-.NET-Core-2.0-on-a-Raspberry-PI-3-running-Linux.md
 - name: 2018 08 17 Azure IoT Edge support for Raspbian 8.0/Debian 8.0
@@ -136,3 +135,9 @@ items:
   href: 2021-03-26-Monorepo-for-Beginners.md
 - name: 2023 04 04 Lego Dimensions Communication Protocol
   href: 2023-04-04-LegoDimensionsProtocol.md
+- name: 2024 01 22 Solving device discovery and capabilities
+  href: 2024-01-22-solving-device-discovery-and-capabilities.md
+- name: 2024 01 28 New Lego train experience with nanoFramework device configuration and discovery
+  href: 2024-01-28-New-Lego-train-experience-with-nanoFramework.md
+- name: 2024 02 01 New Lego train experience REST API on device and ASP.NET application
+  href: 2024-02-01-Lego-train-rest-api-aspnet.md
