@@ -32,7 +32,7 @@ This site is a collection of old blog posts, some are a bit more recent.
 
 [![thumb](../assets/2015-06-18-thumb.jpg) 2015 06 18 ESP8266 and Posting on Windows Azure using Mobile Services](./2015-06-18-ESP8266-and-Posting-on-Windows-Azure-using-Mobile-Services.md)
 
-[![thumb](../assets/2015-04-11-thumb.jpeg) 2015 04 11 Create a DHT11 C library using WiringPI on RaspberryPI and use it in Mono C](./2015-04-11-Create-a-DHT11-C-library-using-WiringPI-on-RaspberryPI-and-use-it-in-Mono-C.md)
+[![thumb](../assets/2015-04-11-thumb.jpeg) 2015 04 11 Create a DHT11 C library using WiringPI on RaspberryPI and use it in Mono C\#](./2015-04-11-Create-a-DHT11-C-library-using-WiringPI-on-RaspberryPI-and-use-it-in-Mono-C.md)
 
 [![thumb](../assets/2015-02-26-thumb.jpg) 2015 02 26 Internet of Things installing Mono/Linux and Windows Embedded on a BeagleBone Black board BBB](./2015-02-26-Internet-of-Things-installing-MonoLinux-and-Windows-Embedded-on-a-BeagleBone-Black-board-(BBB).md)
 
