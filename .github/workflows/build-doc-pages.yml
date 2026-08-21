@@ -63,6 +63,17 @@ jobs:
           Remove-Item $stagingRoot -Recurse -Force -ErrorAction SilentlyContinue
           New-Item $stagingRoot -ItemType Directory | Out-Null
 
+          $documentationExtensions = @(
+            ".md",
+            ".png",
+            ".jpg",
+            ".jpeg",
+            ".gif",
+            ".svg",
+            ".webp",
+            ".pdf"
+          )
+
           foreach ($import in $imports) {
             $repositoryName = [IO.Path]::GetFileNameWithoutExtension($import.Repository)
             $clonePath = Join-Path $stagingRoot $repositoryName
@@ -71,14 +82,17 @@ jobs:
             New-Item $import.Destination -ItemType Directory -Force | Out-Null
             git clone --depth 1 $import.Repository $clonePath
 
-            Get-ChildItem $clonePath -Recurse -File -Filter "*.md" |
-              Where-Object FullName -NotMatch "[\\/]\.github[\\/]" |
+            Get-ChildItem $clonePath -Recurse -File -Force |
+              Where-Object {
+                $documentationExtensions -contains $_.Extension.ToLowerInvariant() -and
+                $_.FullName -notmatch "[\\/]\.github[\\/]"
+              } |
               ForEach-Object {
-              $relativePath = $_.FullName.Substring($clonePath.Length + 1)
-              $destinationPath = Join-Path $import.Destination $relativePath
-              New-Item (Split-Path $destinationPath) -ItemType Directory -Force | Out-Null
-              Copy-Item $_.FullName $destinationPath
-            }
+                $relativePath = $_.FullName.Substring($clonePath.Length + 1)
+                $destinationPath = Join-Path $import.Destination $relativePath
+                New-Item (Split-Path $destinationPath) -ItemType Directory -Force | Out-Null
+                Copy-Item $_.FullName $destinationPath
+              }
           }
 
           $wikiClonePath = Join-Path $stagingRoot "LegoDimensions.wiki"
@@ -161,20 +175,6 @@ jobs:
           "@
           Set-Content "./docs/lego-dimensions/wiki/.override" "index;Minifigures and Vehicles"
 
-      - name: Validate documentation
-        continue-on-error: true
-        run: |
-          markdownlint **/*.md
-
-      - name: Generate Table of Contents
-        shell: pwsh
-        continue-on-error: false
-        run: |
-          DocFxTocGenerator -d ./blog-posts -o ./blog-posts -si
-          DocFxTocGenerator -d ./docs/docfx-companion-tools -o ./docs/docfx-companion-tools --multitoc 10 --folderRef IndexReadme --ordering FoldersFirst --indexing NoDefault --override --ignore
-          DocFxTocGenerator -d ./docs/azure-ai-search-simulator -o ./docs/azure-ai-search-simulator --multitoc 10 --folderRef IndexReadme --ordering FoldersFirst --indexing NoDefault --override
-          DocFxTocGenerator -d ./docs/lego-dimensions -o ./docs/lego-dimensions --multitoc 10 --folderRef IndexReadme --ordering FoldersFirst --indexing NoDefault --override
-
           @(
             "# Samples",
             "",
@@ -195,6 +195,20 @@ jobs:
             "",
             "Browse the [sample data collection](sample-data/index.md) used by extraction and indexing scenarios."
           ) | Set-Content "./docs/azure-ai-search-simulator/content/samples/index.md"
+
+      - name: Validate documentation
+        continue-on-error: true
+        run: |
+          markdownlint **/*.md
+
+      - name: Generate Table of Contents
+        shell: pwsh
+        continue-on-error: false
+        run: |
+          DocFxTocGenerator -d ./blog-posts -o ./blog-posts -si --override
+          DocFxTocGenerator -d ./docs/docfx-companion-tools -o ./docs/docfx-companion-tools --multitoc 10 --folderRef IndexReadme --ordering FoldersFirst --indexing NoDefault --override --ignore
+          DocFxTocGenerator -d ./docs/azure-ai-search-simulator -o ./docs/azure-ai-search-simulator --multitoc 10 --folderRef IndexReadme --ordering FoldersFirst --indexing NoDefault --override
+          DocFxTocGenerator -d ./docs/lego-dimensions -o ./docs/lego-dimensions --multitoc 10 --folderRef IndexReadme --ordering FoldersFirst --indexing NoDefault --override
 
       - name: Build and create index
         shell: pwsh

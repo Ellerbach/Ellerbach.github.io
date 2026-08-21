@@ -4,7 +4,7 @@
           { "files": [ "*.md", "toc.yml", "blog-posts/**.{md,yml}", "docs/**.{md,yml}", "x-cross/toc.yml" ] }
         ],
         "resource": [
-          { "files": ["assets/**", "docs/**/*.{png,jpg,jpeg,gif,svg,webp}"] }
+          { "files": ["assets/**", "docs/**/*.{png,jpg,jpeg,gif,svg,webp,pdf}"] }
         ],
         "dest": "_site",
         "globalMetadata": {

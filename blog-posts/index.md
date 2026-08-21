@@ -130,7 +130,7 @@ This site is a collection of old blog posts, some are a bit more recent.
 
 [![thumb](../assets/2006-09-01-thumb.png) 2006 09 01 J'ai hacké mon onduleur ou le reverse engineering de protocoles de communication part 8](./2006-09-01-J'ai-hacké-mon-onduleur-ou-le-reverse-engineering-de-protocoles-de-communication-(part-8).md)
 
-[![thumb](../assets/2006-08-17-thumb.png) 2016 08 17 J'ai hacké mon onduleur ou le reverse engineering de protocoles de communication part 7](./2006-08-17-J'ai-hacké-mon-onduleur-ou-le-reverse-engineering-de-protocoles-de-communication-(part-7).md)
+[![thumb](../assets/2006-08-17-thumb.png) 2006 08 17 J'ai hacké mon onduleur ou le reverse engineering de protocoles de communication part 7](./2006-08-17-J'ai-hacké-mon-onduleur-ou-le-reverse-engineering-de-protocoles-de-communication-(part-7).md)
 
 [![thumb](../assets/2006-08-15-thumb.png) 2006 08 15 J'ai hacké mon onduleur ou le reverse engineering de protocoles de communication part 6](./2006-08-15-J'ai-hacké-mon-onduleur-ou-le-reverse-engineering-de-protocoles-de-communication-(part-6).md)
 
