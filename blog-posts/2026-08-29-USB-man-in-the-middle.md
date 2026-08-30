@@ -333,31 +333,45 @@ the actual cryptography.
 
 Since the security interface has no endpoints at all, none of that goes
 through `tud_vendor_read()`/`tud_vendor_write()` like the main loop shown
-earlier — control transfers are a separate path, handled in their own
-TinyUSB callback (simplified here; the real version distinguishes
-control-IN from control-OUT and handles both):
+earlier — control transfers are a separate path, with its own SETUP/DATA/
+STATUS stages to handle correctly (an earlier, oversimplified version of
+this snippet stalled non-setup stages and used a stack buffer past its
+lifetime — fixed here to match what's actually running):
 
 ```c
 bool tud_vendor_control_xfer_cb(uint8_t rhport, uint8_t stage,
                                  tusb_control_request_t const *request) {
-    if (stage != CONTROL_STAGE_SETUP || !targets_security_interface(request)) {
+    if (!targets_security_interface(request)) {
         return false;
     }
+    bool const device_to_host = request->bmRequestType_bit.direction == TUSB_DIR_IN;
 
-    // No way to answer XSM3 ourselves -- ask the Pi to perform this exact
-    // control transfer against the real portal, and wait for its answer.
-    uart_send_control_request(request);
-    uint8_t response[64];
-    uint8_t len = wait_for_control_response(response, sizeof(response));
+    if (stage == CONTROL_STAGE_SETUP) {
+        if (device_to_host) {
+            // No way to answer XSM3 ourselves -- ask the Pi to run this
+            // exact control-IN against the real portal, and wait for it.
+            static uint8_t response[64]; // file-scope: outlives this call
+            uint8_t len = relay_control_in(request, response, sizeof(response));
+            return tud_control_xfer(rhport, request, response, len);
+        }
+        // Control-OUT: just accept the data for now, relay once it's here.
+        return tud_control_xfer(rhport, request, out_buf, request->wLength);
+    }
 
-    return tud_control_xfer(rhport, request, response, len);
+    if (stage == CONTROL_STAGE_DATA && !device_to_host) {
+        relay_control_out(request, out_buf, request->wLength); // data has arrived now
+    }
+
+    return true; // accept later stages of a request we already claimed
 }
 ```
 
 That relay is now confirmed working end-to-end against real hardware: the
 full XSM3 sequence (identity → challenge → status poll → response) passes
 cleanly between a test tool, the RP2350, the Pi, and the real portal, with
-no corruption and sub-2ms round trips. The test tool's own reference
+no corruption and sub-2ms round trips — control-IN (identity, status,
+response) and control-OUT (challenge, with a non-trivial payload) both
+exercised, not just the empty/trivial case. The test tool's own reference
 implementation can't finish validating the response — it only knows the
 *published* Microsoft keys, and the real LEGO portal doesn't use them — but
 that's exactly the expected, documented outcome, not a bug in the relay.
