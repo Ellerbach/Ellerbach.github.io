@@ -1,4 +1,4 @@
-# Building a USB man-in-the-middle for a Lego Dimensions portal
+# 2026-08-29 Building a USB man-in-the-middle for a Lego Dimensions portal
 
 This project started with a simple question: what does a Lego Dimensions
 portal actually say to an Xbox over USB? Answering it meant building a
@@ -52,11 +52,15 @@ while (true) {
 }
 ```
 
-That's genuinely the whole idea: the gadget never needs to understand LEGO
-frames, GIP, or XSM3 to relay them — it just needs to know which direction
-each byte is going. The interesting work all happens in how it presents
-*itself* to USB in the first place: the **descriptors**. And this is where
-the Xbox One and Xbox 360 gadgets stop looking anything alike.
+That's genuinely the whole idea for the endpoints both consoles share:
+the gadget never needs to understand LEGO frames or GIP to relay them, it
+just needs to know which direction each byte is going. The Xbox 360 needs
+one more piece of plumbing on top of this — its security handshake doesn't
+use endpoints at all, only control transfers, covered further down — but
+even that follows the same "just relay it" principle. The interesting work
+otherwise all happens in how the gadget presents *itself* to USB in the
+first place: the **descriptors**. And this is where the Xbox One and Xbox
+360 gadgets stop looking anything alike.
 
 The Xbox One portal is refreshingly simple: one vendor-class interface,
 two interrupt endpoints, done.
@@ -138,8 +142,7 @@ the real portal's answer back. Same principle throughout the whole
 project, on both boards: nobody in the middle needs to understand the
 protocol, they just need to move bytes in the right direction.
 
-I ususally don't use Python as a C# lover but here, Copilot came with Python
-and it's to throw away, not something I'll maintain!
+This Python code is throwaway tooling, not code I plan to maintain.
 
 ## Why build a MITM at all?
 
@@ -294,9 +297,9 @@ this is where the full relay earns its keep.
 
 A few high-level differences from the Xbox One:
 
-- LEGO's normal 32-byte command frames are probably wrapped differently — just two
-  header bytes (`0B 14`) in front of 30 bytes of payload — sent over plain
-  interrupt endpoints, no GIP-style envelope.
+- LEGO's normal 32-byte command frames are wrapped differently — a 2-byte
+  header (`0B 14`) in front of the first 30 bytes of the frame — sent over
+  plain interrupt endpoints, no GIP-style envelope.
 - The USB descriptor is a **4-interface composite device**: the main data
   interface, two unused headset-shaped interfaces (present only because
   genuine Xbox 360 controllers have them, and the console's driver stack
@@ -309,7 +312,11 @@ A few high-level differences from the Xbox One:
   talk to the accessory at all.
 
 ```c
-// Xbox 360 LEGO frames: just a 2-byte prefix, not a GIP envelope
+// Xbox 360 LEGO frames: a 2-byte prefix, then as much of the standard
+// 32-byte LEGO frame as still fits in a 32-byte report. lego_frame is the
+// full, standard 32-byte frame; only its first 30 bytes are copied in --
+// forced by the math (32 - 2 prefix bytes = 30), not a bug or a shortcut.
+// The dropped trailing 2 bytes are normally just zero padding.
 uint8_t report[32] = { 0x0B, 0x14 };
 memcpy(report + 2, lego_frame, 30);
 ```
@@ -323,6 +330,29 @@ all — it forwards every single control transfer, verbatim, to the Pi Zero,
 which performs the identical request against the real portal and relays
 the real answer back. The gadget stays a dumb pipe; the real hardware does
 the actual cryptography.
+
+Since the security interface has no endpoints at all, none of that goes
+through `tud_vendor_read()`/`tud_vendor_write()` like the main loop shown
+earlier — control transfers are a separate path, handled in their own
+TinyUSB callback (simplified here; the real version distinguishes
+control-IN from control-OUT and handles both):
+
+```c
+bool tud_vendor_control_xfer_cb(uint8_t rhport, uint8_t stage,
+                                 tusb_control_request_t const *request) {
+    if (stage != CONTROL_STAGE_SETUP || !targets_security_interface(request)) {
+        return false;
+    }
+
+    // No way to answer XSM3 ourselves -- ask the Pi to perform this exact
+    // control transfer against the real portal, and wait for its answer.
+    uart_send_control_request(request);
+    uint8_t response[64];
+    uint8_t len = wait_for_control_response(response, sizeof(response));
+
+    return tud_control_xfer(rhport, request, response, len);
+}
+```
 
 That relay is now confirmed working end-to-end against real hardware: the
 full XSM3 sequence (identity → challenge → status poll → response) passes
