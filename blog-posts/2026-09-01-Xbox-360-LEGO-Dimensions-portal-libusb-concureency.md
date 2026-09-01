@@ -180,6 +180,6 @@ The XSM3 side of this investigation isn't wasted, either: it lives on as a
 diagnostic path in `XboxPortalProbe`, and it's the same protocol the
 [MITM bridge project](2026-08-29-USB-man-in-the-middle.html) has to relay
 verbatim to a real portal, since - unlike this library - it can't just decide
-authentication isn't required. And wait, I just recieved the Xbox 360 game.
-So, game on for some MITM play do see if we can discover this key! XMS3 is
+authentication isn't required. And wait, I just received the Xbox 360 game.
+So, game on for some MITM play to see if we can discover this key! XSM3 is
 fascinating!
