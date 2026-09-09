@@ -4,7 +4,7 @@ Last time, I left things in a decent place: an RP2350 pretending to be a Lego Di
 
 Short answer: yes, mostly, and the part that finally worked is not the part I expected.
 
-![The finished simulator: browser-controlled toy pad, tags placed on the center/left/right positions](https://github.com/Ellerbach/LegoDimensions/blob/main/docs/portal-simulator-main.png)
+![The finished simulator: browser-controlled toy pad, tags placed on the center/left/right positions](https://raw.githubusercontent.com/Ellerbach/LegoDimensions/main/docs/portal-simulator-main.png)
 
 ## There's already a public implementation of this thing
 
@@ -46,7 +46,7 @@ While writing this up I went looking for older prior work and found [brandonw.ne
                                                                 ^^^^^ VID = 0x1BAD (Harmonix)
 ```
 
-VID `0x1BAD` belongs to Harmonix — this is a Guitar Hero or Rock Band peripheral, not a Microsoft controller — and it reports category `0x82`. The same value that failed for me. I fed that capture's actual challenge bytes through the same library and the same public root keys, and it validated cleanly, checksum and MAC both correct. Which confirms the keys really are universal and have nothing to do with category, since the key derivation function only ever takes a console ID, never a category byte.
+VID `0x1BAD` belongs to Harmonix — this is a Guitar Hero or Rock Band peripheral, not a Microsoft controller — and it reports category `0x82`. The same value that failed for me. I fed that capture's actual challenge bytes through the same library and the same public root keys, and it validated cleanly, checksum and MAC both correct. This shows that the published keys also validate this capture.
 
 So, honestly, reporting `0x02` is a fix that works, not one I can fully explain. Something about the combination of category `0x82` with my specific synthetic identity produces a different outcome than a real, licensed Harmonix accessory reporting that same category, and I don't know what that something is yet. What I do know is that a controller identity authenticates fine with only the publicly known keys, and a portal identity, at least in my hands, did not. Maybe someone with a real portal to capture against will eventually explain the gap. For now the workaround is good enough that the game just works.
 
