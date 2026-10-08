@@ -2,7 +2,7 @@
 
 I have wanted to write a speech synthesizer for a very long time.
 
-When I was 16 or 17, I imagined doing it in Pascal on computers that came with one of the first graphics cards. I did not get very far. Producing speech from text looks simple until you try it. Reading characters is easy. Turning them into something that resembles language, with recognizable vowels, consonants, timing, and intonation, is not. I was fascinated byt those games which came with some voices in it. Even if it was very rudimental at that time.
+When I was 16 or 17, I imagined doing it in Pascal on computers that came with one of the first graphics cards. I did not get very far. Producing speech from text looks simple until you try it. Reading characters is easy. Turning them into something that resembles language, with recognizable vowels, consonants, timing, and intonation, is not. I was fascinated by those games which came with some voices in it. Even if it was very rudimental at that time.
 
 The idea stayed with me, though: could I write a small synthesizer that would run on hardware comparable, at least in spirit, to what was available then?
 
@@ -66,7 +66,7 @@ The renderer changed in several steps:
 
 These changes roughly halved buffered synthesis time in device measurements. The important part was preserving behavior while optimizing. I kept deterministic tests and compared PCM hashes before and after hot-path changes. An optimization that makes speech faster but silently changes every waveform is not necessarily wrong, but it is a different experiment. I wanted to know when that happened.
 
-This is the kind of optimisations done:
+Here are the some of the optimization results:
 
 | Voice | First | Current | Time saved | Improvement |
 | Smooth | 6,782 ms | 3,160 ms | 3,622 ms | 53.4% faster |
@@ -165,9 +165,9 @@ Number normalization exposed other problems:
 
 These are small rules, but they affect very common words. The silent-final check now understands groups rather than only the final character, and “mille,” “ville,” and “tranquille” are exceptions to the `ill` pattern.
 
-French is really complex, much more than English. There are rules and probably more exceptions than rules. And when you come to embedded systems and optimization, you have to make choices. So, I tried to focus on very comment elements rather than trying to solve all problems. And, all this can be improved moving forward.
+French is really complex, much more than English. There are rules and probably more exceptions than rules. And when you come to embedded systems and optimization, you have to make choices. So, I tried to focus on very common elements rather than trying to solve all problems. And, all this can be improved moving forward.
 
-Another defect sounded like noise between phonemes. Every excitation path now fades its final four samples toward unsigned midpoint 128. The fade is short: full level, roughly two thirds, one third, then exactly silence. It is applied to vowels, fricatives, voiced fricatives, and stop components. This reduced boundary clicks without adding long audible fades. And all this is not affecting performances neither. And that's one of the great news!
+Another defect sounded like noise between phonemes. Every excitation path now fades its final four samples toward unsigned midpoint 128. The fade is short: full level, roughly two thirds, one third, then exactly silence. It is applied to vowels, fricatives, voiced fricatives, and stop components. This reduced boundary clicks without adding long audible fades. This does not affect performance either. And that's one of the great news!
 
 ## English needed linguistic fixes too
 
@@ -193,7 +193,7 @@ I also used the local acoustic-analysis pipeline to calculate more plausible Gen
 
 Listening is essential for speech, but it is a poor regression suite by itself.
 
-.NET nanoFramework has its own [test framework](https://github.com/nanoframework/nanoFramework.TestFramework) based on the Microsoft Test Framework. They share the same syntax, meaning, you can have a shared project running tests on traditional .NET and on .NET nanoFramework. Those testsz can run on a virutal device, what I've been using in this project or a real device.
+.NET nanoFramework has its own [test framework](https://github.com/nanoframework/nanoFramework.TestFramework) based on the Microsoft Test Framework. They share the same syntax, meaning, you can have a shared project running tests on traditional .NET and on .NET nanoFramework. Those tests can run on a virtual device, what I've been using in this project or a real device.
 
 The nanoFramework simulator tests cover deterministic synthesis, streaming versus buffered equivalence, WAV headers, truncated files, long-text segmentation, number expansion, fixed phoneme capacity, independent formant glides, Nyquist clamping, phoneme-tail fading, French pronunciation cases, and English irregular words.
 
