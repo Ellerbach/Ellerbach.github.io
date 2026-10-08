@@ -1,4 +1,4 @@
-# Killing the sidecar: getting the Xbox 360 portal to authenticate on its own
+# 2026-09-09 Killing the sidecar: getting the Xbox 360 portal to authenticate on its own
 
 Last time, I left things in a decent place: an RP2350 pretending to be a Lego Dimensions portal's data interface, and a second board (a Pi Zero) doing the actual security handshake against a real, physical portal plugged into it. It worked. The console was happy, the game ran, tags placed fine. But it bugged me. Two boards and a genuine licensed accessory, just to get one console to say yes? That felt like cheating in the wrong direction. So the question became: can interface 3's security handshake be answered locally, with nothing real in the loop at all?
 
