@@ -28,7 +28,7 @@ The **language frontend** understands written language. It handles numbers, spel
 
 The **renderer** knows almost nothing about language. It receives acoustic instructions such as:
 
-> Make a voiced sound for 125 ms, place its strongest frequency regions around 730 Hz, 1090 Hz, and 2440 Hz, and begin near MIDI note 45.
+> Make a voiced sound for 125 ms, place its strongest frequency regions around 657 Hz, 1310 Hz, and 2440 Hz, and begin near MIDI note 45.
 
 This separation is important. The renderer does not know that `eau` is usually pronounced like /o/ in French. The French frontend does. Conversely, the frontend does not generate individual audio samples. The renderer does.
 
@@ -55,7 +55,7 @@ A **phoneme** is a useful sound unit, not a character.
 
 The word `chat`, for example, should not be rendered as four independent letter sounds. [`FrenchTtsFrontend`](https://github.com/nanoframework/nanoFramework.IoT.Device/blob/main/devices/Text2Speech/Languages/French/FrenchTtsFrontend.cs) recognizes `ch` as a pattern and emits the `Sh` acoustic phoneme. Other patterns are longer:
 
-- `eau` and `eaux` become a close *`o`** (I know, 3 and 4 letters for only 1 phoneme 😄);
+- `eau` and `eaux` become a close **`o`** (I know, 3 and 4 letters for only 1 phoneme 😄);
 - `gn` becomes the palatal sound represented by `Ny`;
 - `oi` becomes a `W` glide followed by `A`;
 - `an`, `en`, `on`, `in`, and related spellings may become nasal vowels;
@@ -77,7 +77,7 @@ P(type, f1, f2, f3, a1, a2, a3, pitch, duration, voiced)
 One current definition for the French vowel `A` is:
 
 ```csharp
-P(TtsPhonemeType.Voiced, 730, 1090, 2440, 6, 5, 2, 45, 125)
+P(TtsPhonemeType.Voiced, 657, 1310, 2440, 6, 5, 2, 45, 125)
 ```
 
 That one line is a tiny sound recipe:
@@ -85,8 +85,8 @@ That one line is a tiny sound recipe:
 | Field | Value | Meaning here |
 | --- | ---: | --- |
 | `type` | `Voiced` | Use periodic excitation: a repeating vocal-fold-like source |
-| `f1` | 730 Hz | First formant frequency |
-| `f2` | 1090 Hz | Second formant frequency |
+| `f1` | 657 Hz | First formant frequency |
+| `f2` | 1310 Hz | Second formant frequency |
 | `f3` | 2440 Hz | Third formant frequency |
 | `a1` | 6 | Relative contribution of F1 |
 | `a2` | 5 | Relative contribution of F2 |
@@ -127,7 +127,7 @@ Real speech contains more than three formants and a great deal of fine structure
 
 ![F1, F2, and F3 shown as three peaks on a frequency spectrum, with separate visual explanations for mouth opening, tongue position, and upper spectral character](../assets/formants-f1-f2-f3.svg)
 
-*The three formants are frequency **locations**. In this `A` example, they sit at 730, 1090, and 2440 Hz. The peak heights in this drawing are illustrative; A1, A2, and A3 control their actual contribution in the renderer.*
+*The three formants are frequency **locations**. In this `A` example, they sit at 657, 1310, and 2440 Hz. The peak heights in this drawing are illustrative; A1, A2, and A3 control their actual contribution in the renderer.*
 
 ### What F1 usually tells us
 
@@ -139,8 +139,8 @@ F1 is strongly related to how open the mouth is, or more precisely to vowel heig
 Compare the table values:
 
 ```text
-/i/: F1 about 270 Hz
-/a/: F1 about 730 Hz
+/i/: F1 about 274 Hz
+/a/: F1 about 657 Hz
 ```
 
 That large difference helps the ear distinguish the close `i` from the open `a`.
@@ -157,8 +157,8 @@ F2 is strongly related to where the tongue constricts the vocal tract:
 For example:
 
 ```text
-/i/: F2 about 2290 Hz
-/u/: F2 about 610 Hz
+/i/: F2 about 2253 Hz
+/u/: F2 about 788 Hz
 ```
 
 Both are close vowels and therefore both have relatively low F1. Their very different F2 values separate the bright, front `i` from the dark, back, rounded `ou`.
@@ -513,7 +513,7 @@ People have different vocal tracts. Formants vary with sex, age, accent, speakin
 
 The repository does not include a host-side French acoustic calibration workflow. It aligns native recordings to phonemes, measures stable F1/F2/F3 windows with linear predictive coding, rejects unstable measurements, and summarizes robust candidates. Those reports are evidence for a human tuning decision, not automatic source changes.
 
-That last step matters. A statistically central value is not guaranteed to sound best in a simplified oscillator renderer. Measurement narrows the search; listening and regression testing finish it. I had to listen to a lot os different sentences both in French and in English to improve the quality. And the problem can reside in any part of the flow.
+That last step matters. A statistically central value is not guaranteed to sound best in a simplified oscillator renderer. Measurement narrows the search; listening and regression testing finish it. I had to listen to a lot of different sentences both in French and in English to improve the quality. And the problem can reside in any part of the flow.
 
 This is also why a table may evolve over time. Changing `A` from one plausible F1/F2 pair to another is not necessarily correcting a typo. It may be recalibrating a deliberately simplified voice.
 

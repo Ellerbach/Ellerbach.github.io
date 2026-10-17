@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="620" viewBox="0 0 1000 620" role="img" aria-labelledby="title description">
   <title id="title">Visual guide to F1, F2, and F3</title>
-  <desc id="description">A speech spectrum with peaks at 730, 1090, and 2440 hertz, followed by panels explaining that F1 relates to mouth opening, F2 to tongue position, and F3 to upper spectral character.</desc>
+  <desc id="description">A speech spectrum with peaks at 657, 1310, and 2440 hertz, followed by panels explaining that F1 relates to mouth opening, F2 to tongue position, and F3 to upper spectral character.</desc>
   <defs>
     <linearGradient id="background" x1="0" x2="1" y1="0" y2="1">
       <stop offset="0" stop-color="#f8fafc"/>
@@ -38,27 +38,27 @@
     </g>
 
     <path d="M0 225
-             C65 223, 105 215, 126 180
-             C141 154, 145 70, 157 42
-             C169 72, 170 145, 184 177
-             C194 198, 212 207, 222 188
-             C231 171, 226 105, 234 78
-             C243 107, 244 173, 259 197
+             C65 223, 89 215, 110 180
+             C125 154, 129 70, 141 42
+             C153 72, 154 145, 168 177
+             C194 218, 245 217, 270 188
+             C279 171, 274 105, 282 78
+             C291 107, 292 173, 307 197
              C305 226, 425 220, 500 213
              C514 201, 515 151, 525 123
              C537 153, 536 203, 554 216
              C635 224, 760 226, 860 226"
           fill="none" stroke="#334155" stroke-width="5" stroke-linecap="round"/>
 
-    <line x1="157" y1="42" x2="157" y2="235" stroke="#e11d48" stroke-width="2" stroke-dasharray="6 6"/>
-    <circle cx="157" cy="42" r="7" fill="#e11d48"/>
-    <rect x="105" y="4" width="104" height="34" rx="17" fill="#ffe4e6"/>
-    <text x="157" y="27" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#be123c" text-anchor="middle">F1 730 Hz</text>
+    <line x1="141" y1="42" x2="141" y2="235" stroke="#e11d48" stroke-width="2" stroke-dasharray="6 6"/>
+    <circle cx="141" cy="42" r="7" fill="#e11d48"/>
+    <rect x="89" y="4" width="104" height="34" rx="17" fill="#ffe4e6"/>
+    <text x="141" y="27" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#be123c" text-anchor="middle">F1 657 Hz</text>
 
-    <line x1="234" y1="78" x2="234" y2="235" stroke="#2563eb" stroke-width="2" stroke-dasharray="6 6"/>
-    <circle cx="234" cy="78" r="7" fill="#2563eb"/>
-    <rect x="216" y="39" width="116" height="34" rx="17" fill="#dbeafe"/>
-    <text x="274" y="62" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#1d4ed8" text-anchor="middle">F2 1090 Hz</text>
+    <line x1="282" y1="78" x2="282" y2="235" stroke="#2563eb" stroke-width="2" stroke-dasharray="6 6"/>
+    <circle cx="282" cy="78" r="7" fill="#2563eb"/>
+    <rect x="224" y="39" width="116" height="34" rx="17" fill="#dbeafe"/>
+    <text x="282" y="62" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#1d4ed8" text-anchor="middle">F2 1310 Hz</text>
 
     <line x1="525" y1="123" x2="525" y2="235" stroke="#7c3aed" stroke-width="2" stroke-dasharray="6 6"/>
     <circle cx="525" cy="123" r="7" fill="#7c3aed"/>
