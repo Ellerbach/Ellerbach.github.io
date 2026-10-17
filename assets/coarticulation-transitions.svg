@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="570" viewBox="0 0 1000 570" role="img" aria-labelledby="title desc">
+  <title id="title">Coarticulation and formant transitions</title>
+  <desc id="desc">An abrupt version shows formant frequencies jumping at phoneme boundaries. A smoothed version shows F1, F2, and F3 bending toward neighboring phoneme targets during transition windows.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2ff"/></linearGradient></defs>
+  <rect width="1000" height="570" rx="24" fill="url(#bg)"/>
+  <text x="45" y="48" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="700" fill="#0f172a">Coarticulation turns acoustic tiles into movement</text>
+  <text x="45" y="77" font-family="Segoe UI,Arial,sans-serif" font-size="16" fill="#475569">Each color is one formant target moving through three voiced phonemes.</text>
+
+  <g font-family="Segoe UI,Arial,sans-serif">
+    <rect x="45" y="105" width="910" height="180" rx="18" fill="#fff" stroke="#cbd5e1"/>
+    <text x="70" y="137" font-size="19" font-weight="700" fill="#b91c1c">Without smoothing: instant jumps</text>
+    <line x1="115" y1="250" x2="910" y2="250" stroke="#94a3b8"/>
+    <line x1="360" y1="150" x2="360" y2="250" stroke="#cbd5e1" stroke-dasharray="5 5"/>
+    <line x1="650" y1="150" x2="650" y2="250" stroke="#cbd5e1" stroke-dasharray="5 5"/>
+    <path d="M115 225 H360 V210 H650 V230 H910" fill="none" stroke="#e11d48" stroke-width="5"/>
+    <path d="M115 190 H360 V170 H650 V200 H910" fill="none" stroke="#2563eb" stroke-width="5"/>
+    <path d="M115 160 H360 V185 H650 V155 H910" fill="none" stroke="#7c3aed" stroke-width="5"/>
+    <g font-size="14" fill="#64748b" text-anchor="middle"><text x="237" y="270">phoneme A</text><text x="505" y="270">phoneme B</text><text x="780" y="270">phoneme C</text></g>
+
+    <rect x="45" y="310" width="910" height="215" rx="18" fill="#fff" stroke="#cbd5e1"/>
+    <text x="70" y="342" font-size="19" font-weight="700" fill="#047857">With smoothing: the mouth is already moving</text>
+    <rect x="320" y="360" width="80" height="125" fill="#d1fae5" opacity=".7"/>
+    <rect x="610" y="360" width="80" height="125" fill="#d1fae5" opacity=".7"/>
+    <line x1="115" y1="485" x2="910" y2="485" stroke="#94a3b8"/>
+    <path d="M115 460 H320 C345 460 370 445 400 445 H610 C635 445 665 465 690 465 H910" fill="none" stroke="#e11d48" stroke-width="5"/>
+    <path d="M115 425 H320 C345 425 370 405 400 405 H610 C635 405 665 435 690 435 H910" fill="none" stroke="#2563eb" stroke-width="5"/>
+    <path d="M115 395 H320 C345 395 370 420 400 420 H610 C635 420 665 390 690 390 H910" fill="none" stroke="#7c3aed" stroke-width="5"/>
+    <g font-size="14" font-weight="700"><text x="125" y="385" fill="#7c3aed">F3</text><text x="125" y="415" fill="#2563eb">F2</text><text x="125" y="452" fill="#e11d48">F1</text></g>
+    <g font-size="13" fill="#047857" text-anchor="middle"><text x="360" y="505">transition window</text><text x="650" y="505">transition window</text></g>
+  </g>
+</svg>

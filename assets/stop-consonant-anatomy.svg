@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560" role="img" aria-labelledby="title desc">
+  <title id="title">Anatomy of voiced and unvoiced stop consonants</title>
+  <desc id="desc">Timelines compare an unvoiced p stop, which has closure and a decaying noise burst, with a voiced b stop, which adds a short voiced murmur before the same closure and burst structure.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f8fafc"/><stop offset="1" stop-color="#eff6ff"/></linearGradient></defs>
+  <rect width="1000" height="560" rx="24" fill="url(#bg)"/>
+  <text x="45" y="48" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="700" fill="#0f172a">A stop consonant is a small sequence of events</text>
+  <text x="45" y="78" font-family="Segoe UI,Arial,sans-serif" font-size="16" fill="#475569">The closure is quiet; the release is a short, decaying noise burst.</text>
+
+  <g font-family="Segoe UI,Arial,sans-serif">
+    <rect x="45" y="110" width="910" height="175" rx="18" fill="#fff" stroke="#cbd5e1"/>
+    <text x="70" y="145" font-size="22" font-weight="700" fill="#b45309">Unvoiced stop: P</text>
+    <rect x="230" y="165" width="250" height="70" rx="10" fill="#e2e8f0"/>
+    <text x="355" y="205" text-anchor="middle" font-size="16" font-weight="600" fill="#334155">closure: 20 ms silence</text>
+    <rect x="480" y="165" width="300" height="70" rx="10" fill="#fef3c7"/>
+    <path d="M495 201 L507 174 L519 227 L531 180 L543 220 L555 184 L567 216 L579 188 L591 212 L603 191 L615 209 L627 194 L639 207 L651 196 L663 205 L675 198 L687 203 L699 199 L735 201" fill="none" stroke="#f59e0b" stroke-width="4"/>
+    <text x="805" y="205" font-size="15" font-weight="600" fill="#92400e">burst decays</text>
+    <line x1="230" y1="255" x2="850" y2="255" stroke="#64748b" stroke-width="2"/>
+    <text x="230" y="274" font-size="13" fill="#64748b">time</text>
+
+    <rect x="45" y="310" width="910" height="200" rx="18" fill="#fff" stroke="#cbd5e1"/>
+    <text x="70" y="345" font-size="22" font-weight="700" fill="#1d4ed8">Voiced stop: B</text>
+    <rect x="135" y="370" width="170" height="70" rx="10" fill="#dbeafe"/>
+    <path d="M150 405 C162 385 174 385 186 405 S210 425 222 405 S246 385 258 405 S282 425 292 405" fill="none" stroke="#2563eb" stroke-width="4"/>
+    <text x="220" y="462" text-anchor="middle" font-size="14" fill="#1e40af">18 ms voiced murmur</text>
+    <rect x="305" y="370" width="250" height="70" rx="10" fill="#e2e8f0"/>
+    <text x="430" y="410" text-anchor="middle" font-size="16" font-weight="600" fill="#334155">20 ms closure</text>
+    <rect x="555" y="370" width="250" height="70" rx="10" fill="#dbeafe"/>
+    <path d="M570 406 L580 380 L590 431 L600 385 L610 425 L620 389 L630 421 L640 393 L650 417 L660 396 L670 414 L680 398 L690 412 L700 400 L710 410 L720 402 L735 407 L780 406" fill="none" stroke="#2563eb" stroke-width="4"/>
+    <text x="820" y="410" font-size="15" font-weight="600" fill="#1e40af">18 ms burst</text>
+    <line x1="135" y1="485" x2="870" y2="485" stroke="#64748b" stroke-width="2"/>
+    <text x="135" y="503" font-size="13" fill="#64748b">time</text>
+  </g>
+</svg>

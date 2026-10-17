@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650" role="img" aria-labelledby="title desc">
+  <title id="title">Prosody across a sentence</title>
+  <desc id="desc">Three pitch contours show a continuation rise, declarative fall, and question rise. Wider final vowel blocks show accent lengthening and gray regions show punctuation pauses.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f8fafc"/><stop offset="1" stop-color="#f5f3ff"/></linearGradient></defs>
+  <rect width="1000" height="650" rx="24" fill="url(#bg)"/>
+  <text x="45" y="48" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="700" fill="#0f172a">Prosody draws a melody over the phonemes</text>
+  <text x="45" y="78" font-family="Segoe UI,Arial,sans-serif" font-size="16" fill="#475569">Line height is relative pitch; block width is time.</text>
+
+  <g font-family="Segoe UI,Arial,sans-serif">
+    <g transform="translate(45 110)">
+      <rect width="910" height="145" rx="18" fill="#fff" stroke="#cbd5e1"/>
+      <text x="25" y="32" font-size="19" font-weight="700" fill="#1d4ed8">Continuation: "Bonjour,"</text>
+      <line x1="190" y1="105" x2="850" y2="105" stroke="#cbd5e1"/>
+      <path d="M190 85 C330 86 460 84 575 82 C670 80 735 65 790 47" fill="none" stroke="#2563eb" stroke-width="6" stroke-linecap="round"/>
+      <rect x="660" y="110" width="130" height="16" rx="8" fill="#93c5fd"/>
+      <rect x="790" y="110" width="60" height="16" rx="8" fill="#cbd5e1"/>
+      <text x="725" y="140" text-anchor="middle" font-size="12" fill="#1e40af">longer final vowel</text>
+      <text x="820" y="140" text-anchor="middle" font-size="12" fill="#64748b">comma</text>
+      <text x="870" y="52" font-size="14" font-weight="600" fill="#1d4ed8">small rise</text>
+    </g>
+
+    <g transform="translate(45 275)">
+      <rect width="910" height="145" rx="18" fill="#fff" stroke="#cbd5e1"/>
+      <text x="25" y="32" font-size="19" font-weight="700" fill="#047857">Statement: "Vous allez bien."</text>
+      <line x1="190" y1="105" x2="850" y2="105" stroke="#cbd5e1"/>
+      <path d="M190 82 C350 82 505 83 610 70 C690 61 735 80 790 99" fill="none" stroke="#059669" stroke-width="6" stroke-linecap="round"/>
+      <rect x="650" y="110" width="140" height="16" rx="8" fill="#6ee7b7"/>
+      <rect x="790" y="110" width="60" height="16" rx="8" fill="#cbd5e1"/>
+      <text x="720" y="140" text-anchor="middle" font-size="12" fill="#047857">accented vowel</text>
+      <text x="820" y="140" text-anchor="middle" font-size="12" fill="#64748b">full stop</text>
+      <text x="805" y="87" font-size="14" font-weight="600" fill="#047857">final fall</text>
+    </g>
+
+    <g transform="translate(45 440)">
+      <rect width="910" height="165" rx="18" fill="#fff" stroke="#cbd5e1"/>
+      <text x="25" y="32" font-size="19" font-weight="700" fill="#6d28d9">Question: "Vous allez bien ?"</text>
+      <line x1="190" y1="105" x2="850" y2="105" stroke="#cbd5e1"/>
+      <path d="M190 78 C340 84 485 90 610 92 C685 92 735 65 790 40" fill="none" stroke="#7c3aed" stroke-width="6" stroke-linecap="round"/>
+      <rect x="650" y="110" width="140" height="16" rx="8" fill="#c4b5fd"/>
+      <rect x="790" y="110" width="60" height="16" rx="8" fill="#cbd5e1"/>
+      <text x="720" y="140" text-anchor="middle" font-size="12" fill="#6d28d9">accented vowel</text>
+      <text x="820" y="140" text-anchor="middle" font-size="12" fill="#64748b">question pause</text>
+      <text x="805" y="50" font-size="14" font-weight="600" fill="#6d28d9">strong rise</text>
+    </g>
+  </g>
+</svg>
