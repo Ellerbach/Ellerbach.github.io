@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="600" viewBox="0 0 1000 600" role="img" aria-labelledby="title desc">
+  <title id="title">Pitch versus formants</title>
+  <desc id="desc">The top comparison keeps formants fixed while changing waveform repetition rate, producing the same vowel at different pitches. The bottom keeps pitch fixed while moving formant peaks, producing different vowels.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f8fafc"/><stop offset="1" stop-color="#ecfeff"/></linearGradient></defs>
+  <rect width="1000" height="600" rx="24" fill="url(#bg)"/>
+  <text x="45" y="48" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="700" fill="#0f172a">Pitch asks "how often?"; formants ask "what shape?"</text>
+
+  <g font-family="Segoe UI,Arial,sans-serif">
+    <rect x="45" y="80" width="910" height="220" rx="18" fill="#fff" stroke="#cbd5e1"/>
+    <text x="70" y="115" font-size="21" font-weight="700" fill="#be123c">Change F0, keep F1/F2/F3</text>
+    <text x="70" y="140" font-size="15" fill="#64748b">The vowel identity stays similar; only its perceived pitch moves.</text>
+    <text x="75" y="188" font-size="15" font-weight="600" fill="#0f172a">low F0</text>
+    <path d="M150 185 C180 125 210 125 240 185 S300 245 330 185 S390 125 420 185" fill="none" stroke="#e11d48" stroke-width="5"/>
+    <text x="535" y="188" font-size="15" font-weight="600" fill="#0f172a">high F0</text>
+    <path d="M610 185 C622 150 634 150 646 185 S670 220 682 185 S706 150 718 185 S742 220 754 185 S778 150 790 185 S814 220 826 185 S850 150 875 185" fill="none" stroke="#e11d48" stroke-width="5"/>
+    <g fill="#fff" stroke="#94a3b8">
+      <rect x="165" y="253" width="240" height="27" rx="13"/><rect x="625" y="253" width="240" height="27" rx="13"/>
+    </g>
+    <g font-size="13" fill="#475569" text-anchor="middle">
+      <text x="285" y="272">same formant targets: same "a"</text>
+      <text x="745" y="272">same formant targets: same "a"</text>
+    </g>
+
+    <rect x="45" y="320" width="910" height="235" rx="18" fill="#fff" stroke="#cbd5e1"/>
+    <text x="70" y="355" font-size="21" font-weight="700" fill="#1d4ed8">Keep F0, change F1/F2/F3</text>
+    <text x="70" y="380" font-size="15" fill="#64748b">The musical note stays similar; the vowel identity changes.</text>
+    <line x1="90" y1="510" x2="430" y2="510" stroke="#94a3b8" stroke-width="2"/>
+    <path d="M90 505 C130 504 139 475 148 415 C157 475 166 500 190 499 C220 498 232 460 242 430 C252 460 265 501 300 502 C330 502 340 480 350 455 C360 480 375 504 430 505" fill="none" stroke="#2563eb" stroke-width="5"/>
+    <text x="260" y="535" font-size="15" font-weight="700" fill="#1d4ed8" text-anchor="middle">vowel A: higher F1, lower F2</text>
+    <line x1="570" y1="510" x2="910" y2="510" stroke="#94a3b8" stroke-width="2"/>
+    <path d="M570 505 C585 504 590 470 598 445 C606 470 614 501 650 501 C680 501 710 500 738 498 C760 495 770 440 780 410 C790 440 800 496 825 499 C850 500 858 455 868 430 C878 455 888 502 910 505" fill="none" stroke="#7c3aed" stroke-width="5"/>
+    <text x="740" y="535" font-size="15" font-weight="700" fill="#6d28d9" text-anchor="middle">vowel I: lower F1, higher F2</text>
+  </g>
+</svg>

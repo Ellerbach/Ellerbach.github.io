@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="600" viewBox="0 0 1000 600" role="img" aria-labelledby="title description">
+  <title id="title">Visual guide to A1, A2, and A3</title>
+  <desc id="description">Three mixer channels show A1, A2, and A3 controlling the contribution of formants F1, F2, and F3. Example weights six, five, and two combine into one output waveform.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#ecfeff"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity=".12"/>
+    </filter>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect width="1000" height="600" rx="24" fill="url(#background)"/>
+  <text x="50" y="50" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#0f172a">A1, A2, and A3 are mixer weights</text>
+  <text x="50" y="82" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#475569">F chooses the frequency location; A chooses that component's contribution</text>
+
+  <g transform="translate(50 125)" font-family="Segoe UI, Arial, sans-serif">
+    <g filter="url(#shadow)">
+      <rect width="245" height="350" rx="20" fill="#fff"/>
+      <rect width="245" height="10" rx="5" fill="#e11d48"/>
+    </g>
+    <text x="24" y="48" font-size="25" font-weight="700" fill="#be123c">A1 = 6</text>
+    <text x="24" y="76" font-size="16" fill="#475569">weight applied to F1</text>
+    <path d="M22 125 C42 88, 62 88, 82 125 S122 162, 142 125 S182 88, 222 125" fill="none" stroke="#e11d48" stroke-width="5"/>
+    <rect x="38" y="185" width="48" height="120" rx="10" fill="#ffe4e6"/>
+    <rect x="38" y="185" width="48" height="120" rx="10" fill="#e11d48" opacity=".85"/>
+    <g font-size="13" fill="#64748b">
+      <line x1="98" y1="185" x2="205" y2="185" stroke="#cbd5e1"/>
+      <text x="106" y="180">stronger</text>
+      <line x1="98" y1="305" x2="205" y2="305" stroke="#cbd5e1"/>
+      <text x="106" y="322">weaker</text>
+    </g>
+    <text x="24" y="338" font-size="15" font-weight="600" fill="#0f172a">largest contribution</text>
+  </g>
+
+  <g transform="translate(325 125)" font-family="Segoe UI, Arial, sans-serif">
+    <g filter="url(#shadow)">
+      <rect width="245" height="350" rx="20" fill="#fff"/>
+      <rect width="245" height="10" rx="5" fill="#2563eb"/>
+    </g>
+    <text x="24" y="48" font-size="25" font-weight="700" fill="#1d4ed8">A2 = 5</text>
+    <text x="24" y="76" font-size="16" fill="#475569">weight applied to F2</text>
+    <path d="M22 125 C32 96, 42 96, 52 125 S72 154, 82 125 S102 96, 112 125 S132 154, 142 125 S162 96, 172 125 S192 154, 222 125" fill="none" stroke="#2563eb" stroke-width="5"/>
+    <rect x="38" y="185" width="48" height="120" rx="10" fill="#dbeafe"/>
+    <rect x="38" y="205" width="48" height="100" rx="10" fill="#2563eb" opacity=".85"/>
+    <g font-size="13" fill="#64748b">
+      <line x1="98" y1="185" x2="205" y2="185" stroke="#cbd5e1"/>
+      <text x="106" y="180">stronger</text>
+      <line x1="98" y1="305" x2="205" y2="305" stroke="#cbd5e1"/>
+      <text x="106" y="322">weaker</text>
+    </g>
+    <text x="24" y="338" font-size="15" font-weight="600" fill="#0f172a">slightly smaller</text>
+  </g>
+
+  <g transform="translate(600 125)" font-family="Segoe UI, Arial, sans-serif">
+    <g filter="url(#shadow)">
+      <rect width="245" height="350" rx="20" fill="#fff"/>
+      <rect width="245" height="10" rx="5" fill="#7c3aed"/>
+    </g>
+    <text x="24" y="48" font-size="25" font-weight="700" fill="#6d28d9">A3 = 2</text>
+    <text x="24" y="76" font-size="16" fill="#475569">weight applied to F3</text>
+    <path d="M22 125 L32 101 L42 149 L52 101 L62 149 L72 101 L82 149 L92 101 L102 149 L112 101 L122 149 L132 101 L142 149 L152 101 L162 149 L172 101 L182 149 L192 101 L202 149 L222 125" fill="none" stroke="#7c3aed" stroke-width="5" stroke-linejoin="round"/>
+    <rect x="38" y="185" width="48" height="120" rx="10" fill="#ede9fe"/>
+    <rect x="38" y="265" width="48" height="40" rx="10" fill="#7c3aed" opacity=".85"/>
+    <g font-size="13" fill="#64748b">
+      <line x1="98" y1="185" x2="205" y2="185" stroke="#cbd5e1"/>
+      <text x="106" y="180">stronger</text>
+      <line x1="98" y1="305" x2="205" y2="305" stroke="#cbd5e1"/>
+      <text x="106" y="322">weaker</text>
+    </g>
+    <text x="24" y="338" font-size="15" font-weight="600" fill="#0f172a">lighter upper color</text>
+  </g>
+
+  <path d="M172 495 C172 530, 430 525, 870 525" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M447 495 C447 512, 630 512, 870 525" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M722 495 C722 505, 800 512, 870 525" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <circle cx="894" cy="525" r="35" fill="#0f172a"/>
+  <text x="894" y="520" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">mixed</text>
+  <text x="894" y="537" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#fff" text-anchor="middle">sample</text>
+
+  <rect x="50" y="535" width="725" height="42" rx="12" fill="#fff" opacity=".9"/>
+  <text x="70" y="562" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#334155">The numbers are relative coefficients, not percentages or decibels.</text>
+</svg>

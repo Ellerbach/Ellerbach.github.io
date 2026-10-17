@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="600" viewBox="0 0 1000 600" role="img" aria-labelledby="title desc">
+  <title id="title">Amplitude envelopes prevent abrupt waveform edges</title>
+  <desc id="desc">The top panel shows a waveform starting and ending instantly, creating discontinuities that can click. The bottom panel shows the same waveform growing during attack, remaining strong during sustain, and shrinking during release.</desc>
+  <defs>
+    <linearGradient id="background" x2="1" y2="1">
+      <stop stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#fff7ed"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dy="4" stdDeviation="5" flood-color="#0f172a" flood-opacity=".12"/>
+    </filter>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect width="1000" height="600" rx="24" fill="url(#background)"/>
+  <text x="45" y="48" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="700" fill="#0f172a">An envelope turns hard edges into gentle joins</text>
+  <text x="45" y="78" font-family="Segoe UI,Arial,sans-serif" font-size="16" fill="#475569">The oscillator keeps moving; the envelope controls how much of it reaches the output.</text>
+
+  <g font-family="Segoe UI,Arial,sans-serif">
+    <g filter="url(#shadow)">
+      <rect x="45" y="105" width="910" height="190" rx="18" fill="#fff"/>
+    </g>
+    <text x="70" y="140" font-size="20" font-weight="700" fill="#b91c1c">Without an envelope: instant on, instant off</text>
+    <line x1="90" y1="220" x2="910" y2="220" stroke="#94a3b8" stroke-width="2"/>
+    <path d="M90 220 H180 V205
+             C195 170 210 170 225 205 S255 240 270 205
+             S300 170 315 205 S345 240 360 205
+             S390 170 405 205 S435 240 450 205
+             S480 170 495 205 S525 240 540 205
+             S570 170 585 205 S615 240 630 205
+             S660 170 675 205 S705 240 720 205
+             S750 170 765 205 S795 240 820 205
+             V220 H910"
+          fill="none" stroke="#dc2626" stroke-width="5" stroke-linejoin="round"/>
+    <circle cx="180" cy="212" r="18" fill="#fee2e2" stroke="#dc2626" stroke-width="3"/>
+    <path d="M177 198 L169 212 H179 L174 226 L191 207 H181 L187 198 Z" fill="#dc2626"/>
+    <circle cx="820" cy="212" r="18" fill="#fee2e2" stroke="#dc2626" stroke-width="3"/>
+    <path d="M817 198 L809 212 H819 L814 226 L831 207 H821 L827 198 Z" fill="#dc2626"/>
+    <text x="180" y="270" font-size="14" font-weight="600" text-anchor="middle" fill="#b91c1c">discontinuity</text>
+    <text x="820" y="270" font-size="14" font-weight="600" text-anchor="middle" fill="#b91c1c">discontinuity</text>
+
+    <g filter="url(#shadow)">
+      <rect x="45" y="320" width="910" height="235" rx="18" fill="#fff"/>
+    </g>
+    <text x="70" y="355" font-size="20" font-weight="700" fill="#047857">With an envelope: rise, hold, return to silence</text>
+
+    <rect x="180" y="380" width="140" height="130" fill="#dbeafe" opacity=".65"/>
+    <rect x="320" y="380" width="380" height="130" fill="#dcfce7" opacity=".65"/>
+    <rect x="700" y="380" width="120" height="130" fill="#ffedd5" opacity=".8"/>
+    <line x1="90" y1="445" x2="910" y2="445" stroke="#94a3b8" stroke-width="2"/>
+
+    <path d="M180 445 L320 385 H700 L820 445" fill="none" stroke="#0f766e" stroke-width="3" stroke-dasharray="7 5"/>
+    <path d="M180 445 L320 505 H700 L820 445" fill="none" stroke="#0f766e" stroke-width="3" stroke-dasharray="7 5"/>
+
+    <path d="M90 445 H180
+             C190 442 195 438 200 445 S210 454 215 445
+             S226 432 232 445 S244 461 250 445
+             S263 425 270 445 S284 468 292 445
+             S307 415 320 445
+             S340 505 360 445 S400 385 420 445
+             S460 505 480 445 S520 385 540 445
+             S580 505 600 445 S640 385 660 445
+             S690 496 705 445 S730 403 742 445
+             S762 478 772 445 S790 420 798 445
+             S812 461 820 445 H910"
+          fill="none" stroke="#059669" stroke-width="5" stroke-linecap="round"/>
+
+    <g font-size="15" font-weight="700" text-anchor="middle">
+      <text x="250" y="405" fill="#1d4ed8">ATTACK</text>
+      <text x="510" y="405" fill="#047857">SUSTAIN</text>
+      <text x="760" y="405" fill="#c2410c">RELEASE</text>
+    </g>
+    <g font-size="13" fill="#64748b" text-anchor="middle">
+      <line x1="180" y1="530" x2="315" y2="530" stroke="#64748b" marker-end="url(#arrow)"/>
+      <text x="250" y="548">amplitude grows</text>
+      <line x1="320" y1="530" x2="695" y2="530" stroke="#64748b" marker-end="url(#arrow)"/>
+      <text x="510" y="548">near the peak</text>
+      <line x1="700" y1="530" x2="815" y2="530" stroke="#64748b" marker-end="url(#arrow)"/>
+      <text x="760" y="548">fades out</text>
+    </g>
+  </g>
+</svg>
