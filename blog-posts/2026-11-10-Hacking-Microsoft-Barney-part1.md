@@ -20,7 +20,7 @@ Not a printer port. Not VGA either, despite the shared enthusiasm for having 15 
 
 That distinction matters: a connector's shape does not tell you how to talk to the device.
 
-![Barney's Pack](../assests/Barney-pack.jpg)
+![Barney's Pack](../assets/Barney-pack.jpg)
 
 The system looks like this:
 
@@ -118,9 +118,17 @@ Connector diagrams deserve particular suspicion: the solder-side view is mirrore
 
         12 = MIDI OUT from PC -> HV1 -> LV1 -> GPIO4
         15 = MIDI IN to PC    -> HV2 -> LV2 -> GPIO5
-         4, 5    = GND
-         1, 8, 9 = +5 V supply: verify each before using as HV reference
+
+        Level-shifter supply references and common ground:
+        Verified PC +5 V (from pin 1, 8 or 9) -> HV
+        ESP32 3.3 V                           -> LV
+        PC GND (pins 4, 5) --------------------+-- shifter GND (both)
+                                              +-- ESP32 GND
+
+        PC +5 V and ESP32 USB +5 V: DO NOT CONNECT TOGETHER
 ```
+
+Check the candidate supply pins with a multimeter before connecting one verified PC +5 V supply to **HV**. Connect the ESP32's **3.3 V** output to **LV**, and join the PC, both shifter GND pins and ESP32 ground as shown. These are the shifter's power-reference pins, not the **HV1/LV1** and **HV2/LV2** signal channels; both references are required, as explained in the [level-converter hookup guide](https://learn.sparkfun.com/tutorials/bi-directional-logic-level-converter-hookup-guide/all). Keep the ESP32 powered separately over USB without joining its USB 5 V rail to the PC's game-port 5 V supply.
 
 And leave the ESP32's transmit pins **physically disconnected**. Two devices trying to drive the same wire is not a productive conversation. Yes, I tried 😀.
 
