@@ -4,6 +4,18 @@ This site is a collection of old blog posts, some are a bit more recent.
 
 <bloglist>
 
+[![thumb](../assets/2026-11-10-thumb.jpg) Bringing Microsoft's ActiMates Barney Back to Life  Part 1 Listening Before Talking](./2026-11-10-Hacking-Microsoft-Barney-part1.md)
+
+[![thumb](../assets/2026-10-17-thumb.png) 2026 10 17 How this tiny Text2Speech synthesizer finds its voice](./2026-10-17-How-this-tiny-Text2Speech-synthesizer-finds-its-voice.md)
+
+[![thumb](../assets/2026-10-08-thumb.png) 2026 10 08 Building a Small Speech Synthesizer in C# on .NET nanoFramework](./2026-10-08-Building-a-Small-Speech-Synthesizer-in-csharp-on-nanoFramework.md)
+
+[![thumb](../assets/2026-09-09-thumb.png) 2026 09 09 Killing the sidecar getting the Xbox 360 portal to authenticate on its own](./2026-09-09-Lego-Dimensions-killing-the-sidecar.md)
+
+[![thumb](../assets/2026-09-01-thumb.png) 2026 09 01 Waking up the Xbox 360 LEGO Dimensions portal a libusb concurrency bug, not a security gate](./2026-09-01-Xbox-360-LEGO-Dimensions-portal-libusb-concureency.md)
+
+[![thumb](../assets/2026-08-29-thumb.png) 2026 08 29 Building a USB man in the middle for a Lego Dimensions portal](./2026-08-29-USB-man-in-the-middle.md)
+
 [![thumb](../assets/2024-02-01-thumb.png) 2024 02 01 New Lego train experience REST API on device and ASP.NET application](./2024-02-01-Lego-train-rest-api-aspnet.md)
 
 [![thumb](../assets/2024-01-28-thumb.jpg) 2024 01 28 New Lego train experience with nanoFramework device configuration and discovery](./2024-01-28-New-Lego-train-experience-with-nanoFramework.md)
