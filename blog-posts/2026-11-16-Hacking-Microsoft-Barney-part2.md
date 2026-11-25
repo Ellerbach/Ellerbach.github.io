@@ -144,4 +144,4 @@ The important change was moving from **copying bytes** to **understanding enough
 
 Getting through setup is useful. But the goal was never to build the world's most elaborate purple-dinosaur version checker.
 
-In the next post, I'll follow the speech data: how sound fits into these small messages, what the original software reveals, and how I started turning captured bytes back into something I could actually hear.
+In the [next post](./2026-11-25-Hacking-Microsoft-Barney-part3.md), I'll follow the speech data: how sound fits into these small messages, what the original software reveals, and how I started turning captured bytes back into something I could actually hear.
